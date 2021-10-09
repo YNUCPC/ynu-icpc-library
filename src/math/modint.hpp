@@ -2,36 +2,35 @@
 #include "template.hpp"
 
 template <uint64_t Modulus>
-struct modint {
-    using u64 = uint64_t;
-    u64 v;
-    // コンストラクタ
-    modint() : v(0) {}
-    modint(long long x) {
+struct Modint {
+    using mint = Modint;
+    long long v;
+    Modint() : v(0) {}
+    Modint(long long x) {
         x %= Modulus;
         if (x < 0) x += Modulus;
         v = x;
     }
-    u64& val() const { return v; }
+    long long& val() const { return v; }
     // 代入演算子
-    modint& operator+=(const modint rhs) {
+    mint& operator+=(const mint rhs) {
         v += rhs.v;
         if (v >= Modulus) v -= Modulus;
         return *this;
     }
-    modint& operator-=(const modint rhs) {
+    mint& operator-=(const mint rhs) {
         if (v < rhs.v) v += Modulus;
         v -= rhs.v;
         return *this;
     }
-    modint& operator*=(const modint rhs) {
+    mint& operator*=(const mint rhs) {
         v = v * rhs.v % Modulus;
         return *this;
     }
-    modint& operator/=(modint rhs) { return *this = *this * rhs.inv(); }
+    mint& operator/=(mint rhs) { return *this = *this * rhs.inv(); }
     // 累乗, 逆元
-    modint pow(long long n) const {
-        modint x = *this, res = 1;
+    mint pow(long long n) const {
+        mint x = *this, res = 1;
         while (n) {
             if (n & 1) res *= x;
             x *= x;
@@ -39,16 +38,16 @@ struct modint {
         }
         return res;
     }
-    modint inv() const { return pow(Modulus - 2); }
+    mint inv() const { return pow(Modulus - 2); }
     // 算術演算子
-    modint operator+(const modint rhs) const { return modint(*this) += rhs; }
-    modint operator-(const modint rhs) const { return modint(*this) -= rhs; }
-    modint operator*(const modint rhs) const { return modint(*this) *= rhs; }
-    modint operator/(const modint rhs) const { return modint(*this) /= rhs; }
-    modint operator-() const { return modint() - *this; }  // 単項
+    mint operator+(const mint rhs) const { return mint(*this) += rhs; }
+    mint operator-(const mint rhs) const { return mint(*this) -= rhs; }
+    mint operator*(const mint rhs) const { return mint(*this) *= rhs; }
+    mint operator/(const mint rhs) const { return mint(*this) /= rhs; }
+    mint operator-() const { return mint() - *this; }  // 単項
 };
 
-using mint = modint<MOD>;
+using mint = Modint<MOD>;
 
 // 入出力ストリーム
 istream& operator>>(istream& is, mint& x) {
