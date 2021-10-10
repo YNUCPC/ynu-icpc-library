@@ -1,0 +1,38 @@
+\subsection{遅延評価セグメント木}
+
+モノイド$S$と、$S$に対する作用素$f:S \rightarrow S$に対し利用できるデータ構造。
+
+長さ$N$の$S$の配列に対し、
+%
+\begin{itemize}
+    \item 区間$[l,r)$の要素に一括で$f$を作用($a_i \leftarrow f(a_i), l \le i < r$)
+    \item 区間$[l,r)$の要素の総積の取得
+\end{itemize}
+%
+を$O(\log N)$で行うことができる。
+
+\lstinputlisting[firstline=4]{src/datastructure/lazysegtree.hpp}
+
+\subsubsection{使用例}
+
+Range Update \& Range Minimum Query
+
+\begin{lstlisting}
+constexpr int INF = INT32_MAX;
+constexpr int ID = INT32_MAX;
+
+int op(int a, int b) { return min(a, b); }
+int e() { return INF; }
+int mapping(int f, int a) { return (f == ID ? a : f); }
+int composition(int f, int g) { return (f == ID ? g : f); }
+int id() { return ID; }
+
+int n;
+LazySegmentTree<int, op, e, int, mapping, composition, id> seg(n);
+\end{lstlisting}
+
+Range Add \& Range Sum Query
+
+Range Add \& Range Minimum Query
+
+Range Update \& Range Sum Query
