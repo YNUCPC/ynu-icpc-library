@@ -1,0 +1,78 @@
+\subsection{遅延評価セグメント木}
+
+モノイド$S$と、$S$に対する作用素$f:S \rightarrow S$に対し利用できるデータ構造。
+
+長さ$N$の$S$の配列に対し、
+%
+\begin{itemize}
+    \item 区間$[l,r)$の要素に一括で$f$を作用($a_i \leftarrow f(a_i), l \le i < r$)
+    \item 区間$[l,r)$の要素の総積の取得
+\end{itemize}
+%
+を$O(\log N)$で行うことができる。
+
+\lstinputlisting[firstline=4]{src/datastructure/lazysegtree.hpp}
+
+\subsubsection{使用例}
+
+Range Update \& Range Minimum Query
+
+\begin{lstlisting}
+constexpr int INF = INT32_MAX;
+constexpr int ID = INT32_MAX;
+
+int op(int a, int b) { return min(a, b); }
+int e() { return INF; }
+int mapping(int f, int a) { return (f == ID ? a : f); }
+int composition(int f, int g) { return (f == ID ? g : f); }
+int id() { return ID; }
+
+int n;
+LazySegmentTree<int, op, e, int, mapping, composition, id> seg(n);
+\end{lstlisting}
+
+Range Add \& Range Sum Query
+
+\begin{lstlisting}
+using S = pair<ll, ll>;
+
+S op(S a, S b) { return S(a.first + b.first, a.second + b.second); }
+S e() { return P(0, 0); }
+S mapping(ll f, S x) { return S(x.first + f * x.second, x.second); }
+ll composition(ll f, ll g) { return f + g; }
+ll id() { return 0; }
+
+int n;
+vector<S> a(n, S(0, 1));
+LazySegmentTree<S, op, e, ll, mapping, composition, id> seg(a);
+\end{lstlisting}
+
+Range Add \& Range Minimum Query
+
+\begin{lstlisting}
+int op(int a, int b) { return min(a, b); }
+int e() { return INT32_MAX; }
+int mapping(int f, int x) { return x + f; }
+int composition(int f, int g) { return f + g; }
+int id() { return 0; }
+
+vector<int> a(n, 0);
+LazySegmentTree<int, op, e, int, mapping, composition, id> seg(a);
+\end{lstlisting}
+
+Range Update \& Range Sum Query
+
+\begin{lstlisting}
+using S = pair<ll, ll>;
+constexpr int ID = INT32_MAX;
+
+S op(S a, S b) { return S(a.first + b.first, a.second + b.second); }
+S e() { return S(0, 0); }
+S mapping(int f, S x) { return (f == ID ? x : S(f * x.second, x.second)); }
+int composition(int f, int g) { return (f == ID ? g : f); }
+int id() { return ID; }
+
+int n;
+vector<S> a(n, S(0, 1));
+LazySegmentTree<S, op, e, int, mapping, composition, id> seg(a);
+\end{lstlisting}
