@@ -3,12 +3,18 @@ name: verify
 on:
   push:
     branches:
-      - master
+      - main
       - develop
+    paths:
+      - '**.hpp'
+      - '**.cpp'
   pull_request:
     branches:
-      - master
+      - main
       - develop
+    paths:
+      - '**.hpp'
+      - '**.cpp'
 
 jobs:
   oj-verify:
