@@ -1,5 +1,7 @@
 # YNU ICPC Library
 
+[![verify](https://github.com/YNUCPC/ynu-icpc-library/actions/workflows/verify.yml/badge.svg)](https://github.com/YNUCPC/ynu-icpc-library/actions/workflows/verify.yml)
+
 横浜国立大学競技プログラミング部のICPC用のライブラリです。
 
 ## 方針
