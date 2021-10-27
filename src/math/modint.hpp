@@ -1,7 +1,8 @@
 #pragma once
-#include "template.hpp"
+#include <bits/stdc++.h>
+using namespace std;
 
-template <uint64_t Modulus>
+template <int64_t Modulus>
 struct Modint {
     using mint = Modint;
     long long v;
@@ -11,7 +12,7 @@ struct Modint {
         if (x < 0) x += Modulus;
         v = x;
     }
-    long long& val() const { return v; }
+    const long long& val() const { return v; }
     // 代入演算子
     mint& operator+=(const mint rhs) {
         v += rhs.v;
@@ -46,16 +47,3 @@ struct Modint {
     mint operator/(const mint rhs) const { return mint(*this) /= rhs; }
     mint operator-() const { return mint() - *this; }  // 単項
 };
-
-using mint = Modint<MOD>;
-
-// 入出力ストリーム
-istream& operator>>(istream& is, mint& x) {
-    long long a;
-    is >> a;
-    x = a;
-    return is;
-}
-ostream& operator<<(ostream& os, mint& x) {
-    return os << x.val();
-}
