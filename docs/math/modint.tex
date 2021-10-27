@@ -1,7 +1,24 @@
 \subsection{modint}
 
-自動的にmodをとる構造体。modが問題で固定であるとき使用できる。
+自動的にmodをとる構造体。modが問題で固定かつ素数であるとき使用できる。
 
 using mint = modint\verb|<|1000000007\verb|>|; 等のように定義して使用するのが推奨。
 
-\lstinputlisting[firstline=4]{src/math/modint.hpp}
+\lstinputlisting[firstline=5]{src/math/modint.hpp}
+
+\subsubsection*{入出力ストリームの実装}
+
+\begin{lstlisting}
+using mint = Modint<MOD>;
+
+// 入出力ストリーム
+istream& operator>>(istream& is, mint& x) {
+    long long a;
+    is >> a;
+    x = a;
+    return is;
+}
+ostream& operator<<(ostream& os, mint& x) {
+    return os << x.val();
+}
+\end{lstlisting}
