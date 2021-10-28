@@ -13,7 +13,7 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v2
 
-      - name: Pull docker
+      - name: Pull docker (paperist/texlive-ja)
         run: docker pull paperist/texlive-ja:latest
 
       - name: Download jlisting.sty
