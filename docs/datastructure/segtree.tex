@@ -5,5 +5,16 @@
 長さ$N$の$S$の配列に対し、要素の1点更新、区間クエリを$O(\log N)$で行える。
 モノイド$S$同士の演算の計算量が$O(f(n))$とき、すべての計算量が$O(f(n))$倍になる。
 
+\lstinputlisting[firstline=5]{src/datastructure/segtree.hpp}
 
-\lstinputlisting[firstline=4]{src/datastructure/segtree.hpp}
+\subsubsection*{使用例}
+
+Range Minimum Query (RMQ)
+
+\begin{lstlisting}
+int op(int a, int b) { return min(a, b); }
+int e() { return INT32_MAX; }
+
+int n;
+SegmentTree<int, op, e> seg(n);
+\end{lstlisting}

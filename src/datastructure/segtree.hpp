@@ -1,10 +1,15 @@
 #pragma once
-#include "template.hpp"
+#include <bits/stdc++.h>
+using namespace std;
 
 template <class S, S (*op)(S, S), S (*e)()>
 struct SegmentTree {
+  private:
     int _n, size, log;
     vector<S> dat;
+    void update(int k) { dat[k] = op(dat[2 * k], dat[2 * k + 1]); }
+
+  public:
     SegmentTree() : SegmentTree(0) {}
     SegmentTree(int n) : SegmentTree(vector<S>(n, e())) {}
     SegmentTree(const vector<S>& v) : _n(int(v.size())) {
@@ -17,7 +22,6 @@ struct SegmentTree {
             update(i);
         }
     }
-    void update(int k) { dat[k] = op(dat[2 * k], dat[2 * k + 1]); }
     // a[p] = x
     void set(int p, S x) {
         p += size;
@@ -43,7 +47,7 @@ struct SegmentTree {
     }
     S all_prod() const { return dat[1]; }
 
-    // SegmentTree上の二分探索
+    // SegmentTree上の二分探索 (必要な場合)
     // return r, f(op(a[l], ..., a[r-1])) == true
     template <bool (*f)(S)>
     int max_right(int l) const {
