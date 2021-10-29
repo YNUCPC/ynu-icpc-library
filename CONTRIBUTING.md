@@ -42,12 +42,14 @@ latexmk main.tex
 1. `src/<hoge>/<fuga>.hpp`を作成する
 
     ソースコードを記述したファイルを作成します。
-    テスト（予定）のためインクルードガードを書いてください。
+    テストのためインクルードガードを書いてください。
+    また、`REP(i,n)`のようなマクロはライブラリ中でなるべく使わないこととします。
     詳細な命名規則は[こちら](#C++スタイルガイド)を参考にしてください。
 
     ```c++
     #pragma once
-    #include "template.hpp"
+    #include <bits/stdc++.h>
+    using namespace std;
 
     struct Fuga{
         ...
