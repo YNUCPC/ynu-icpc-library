@@ -1,6 +1,6 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_F"
+#include <bits/stdc++.h>
 #include "src/datastructure/lazysegtree.hpp"
-#include "src/template/template.hpp"
 
 constexpr int E = INT32_MAX;
 constexpr int ID = INT32_MAX;
@@ -17,7 +17,7 @@ int main() {
     int n, q;
     cin >> n >> q;
     LazySegmentTree<int, op, e, int, mapping, composition, id> seg(n);
-    REP(i, q) {
+    for (int i = 0; i < q; i++) {
         int c;
         cin >> c;
         if (c == 0) {
