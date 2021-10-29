@@ -1,11 +1,12 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_G"
+#include <bits/stdc++.h>
 #include "src/datastructure/lazysegtree.hpp"
-#include "src/template/template.hpp"
 
+using ll = long long;
 using S = pair<ll, ll>;
 
 S op(S a, S b) { return S(a.first + b.first, a.second + b.second); }
-S e() { return P(0, 0); }
+S e() { return S(0, 0); }
 S mapping(ll f, S x) { return S(x.first + f * x.second, x.second); }
 ll composition(ll f, ll g) { return f + g; }
 ll id() { return 0; }
@@ -17,7 +18,7 @@ int main() {
     cin >> n >> q;
     vector<S> a(n, S(0, 1));
     LazySegmentTree<S, op, e, ll, mapping, composition, id> seg(a);
-    REP(i, q) {
+    for (int i = 0; i < q; i++) {
         int c;
         cin >> c;
         if (c == 0) {

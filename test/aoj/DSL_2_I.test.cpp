@@ -1,7 +1,8 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_I"
+#include <bits/stdc++.h>
 #include "src/datastructure/lazysegtree.hpp"
-#include "src/template/template.hpp"
 
+using ll = long long;
 using S = pair<ll, ll>;
 constexpr int ID = INT32_MAX;
 
@@ -18,7 +19,7 @@ int main() {
     cin >> n >> q;
     vector<S> a(n, S(0, 1));
     LazySegmentTree<S, op, e, int, mapping, composition, id> seg(a);
-    REP(i, q) {
+    for (int i = 0; i < q; i++) {
         int c;
         cin >> c;
         if (c == 0) {

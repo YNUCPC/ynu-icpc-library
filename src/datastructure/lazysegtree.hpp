@@ -1,5 +1,6 @@
 #pragma once
-#include "src/template/template.hpp"
+#include <bits/stdc++.h>
+using namespace std;
 
 template <class S,
           S (*op)(S, S),

@@ -1,5 +1,5 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_H"
-#include "src/template/template.hpp"
+#include <bits/stdc++.h>
 #include "src/datastructure/lazysegtree.hpp"
 
 int op(int a, int b) { return min(a, b); }
@@ -15,7 +15,7 @@ int main() {
     cin >> n >> q;
     vector<int> a(n, 0);
     LazySegmentTree<int, op, e, int, mapping, composition, id> seg(a);
-    REP(i, q) {
+    for (int i = 0; i < q; i++) {
         int c;
         cin >> c;
         if (c == 0) {
