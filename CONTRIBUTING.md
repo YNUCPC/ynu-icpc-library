@@ -16,9 +16,9 @@
 ローカルで作業する場合は基本的に以下の手順で行います。
 
 1. ローカルにClone/Pullする
-1. `develop`ブランチに移動する (`git checkout develop`)
 1. 作業用のBranchをつくる (例： `git checkout -b add-new-algrithm`)
 1. ライブラリの追加・修正を行う
+1. テストを書く
 1. 変更をPushする
 1. Pull Requestを送る
 1. ReviewしてMergeする
@@ -76,6 +76,14 @@ latexmk main.tex
     ...
     \input{docs/<hoge>/<fuga>.tex}
     ```
+
+## テストの追加方法
+
+[online-judge-tools/verification-helper](https://github.com/online-judge-tools/verification-helper/blob/master/README.ja.md) を使用して、オンラインジャッジの問題でライブラリのverifyを行えます。
+
+`test/`に`***.test.cpp`というファイルを作成するとテスト用プログラムとして認識されます。
+
+現在利用できるのは [Aizu Online Judge](https://onlinejudge.u-aizu.ac.jp/) と [Library Checker](https://judge.yosupo.jp/) の問題です。
 
 ## C++スタイルガイド
 
