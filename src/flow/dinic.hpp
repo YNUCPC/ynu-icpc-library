@@ -1,5 +1,6 @@
 #pragma once
-#include "template.hpp"
+#include <bits/stdc++.h>
+using namespace std;
 
 //Dinic法 O(V^2E)
 struct Dinic {
