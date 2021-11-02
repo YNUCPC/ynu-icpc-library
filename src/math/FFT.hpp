@@ -13,7 +13,7 @@ vector<complex<double>> encode(vector<long long> &a){
     return ret;
 }
  
-//複素数配列を整数へ
+// 複素数配列を整数へ
 vector<long long> decode(vector<complex<double>> &a){
     int N = a.size();
     vector<long long> ret(N);
