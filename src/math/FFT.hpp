@@ -2,7 +2,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-//整数配列を複素数へ
+// 整数配列を複素数へ
  
 vector<complex<double>> encode(vector<long long> &a){
     int N = a.size();
