@@ -23,7 +23,7 @@ vector<long long> decode(vector<complex<double>> &a){
     return ret;
 }
  
-//非再帰
+// 非再帰
 void FFT(vector<complex<double>> &a,int reverse = false) {
     int n = a.size();
     int h = 0; 
