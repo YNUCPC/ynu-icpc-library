@@ -1,0 +1,11 @@
+\subsection{FFT}
+
+
+\begin{itemize}
+    \item encode(a):整数型の配列$a$をstd::complex型に変換。
+    \item decode(a):std::complex型の配列$a$を64bit整数型に変換。配列の要素毎に実部を丸めて整数に変換している。
+    \item FFT(a):std::complex型で長さ$n$の配列$a$をフーリエ変換する。整数型の配列は引数にとれないため、encode(a),decode(a)等で適宜変換を行うこと。
+    \item convolution(a,b):長さ$n$の整数列$a$,長さ$m$の整数列$b$の畳み込みを$O((n+m)\log(n+m))$で計算する。畳み込み後の配列の要素がすべてdoubleに収まる必要がある。
+\end{itemize}
+
+\lstinputlisting[firstline=5]{src/math/FFT.hpp}
