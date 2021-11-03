@@ -53,7 +53,7 @@ void compute(){
       maxi = max(maxi,cost);
     }
   }
-  printf("%.10lf\n",maxi);
+  printf("%.5lf\n",maxi);
 }
 
 int main(){
