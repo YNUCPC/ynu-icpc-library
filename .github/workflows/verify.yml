@@ -4,14 +4,12 @@ on:
   push:
     branches:
       - main
-      - develop
   pull_request:
     branches:
       - main
-      - develop
 
 jobs:
-  pre_job:
+  skip-check:
     runs-on: ubuntu-latest
     # Map a step output to a job output
     outputs:
@@ -24,8 +22,8 @@ jobs:
           paths: '["**.hpp", "**.cpp"]'
 
   oj-verify:
-    needs: pre_job
-    if: ${{ needs.pre_job.outputs.should_skip != 'true' }}
+    needs: skip-check
+    if: ${{ needs.skip-check.outputs.should_skip != 'true' }}
 
     runs-on: ubuntu-latest
 
