@@ -36,6 +36,14 @@ jobs:
       - name: Install dependencies
         run: pip3 install online-judge-verify-helper
 
+      - name: Cache test cases
+        uses: actions/cache@v2
+        with:
+          path: /.verify-helper/cache
+          key: ${{ runner.os }}-verify-helper-${{ hashFiles('**/test.cpp') }}
+          restore-keys: |
+            ${{ runner.os }}-verify-helper-
+
       - name: Run tests
         run: oj-verify run --jobs 2
 
