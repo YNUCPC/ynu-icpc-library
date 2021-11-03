@@ -1,6 +1,6 @@
 #define PROBLEM "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2081"
-#include "src/geometry/3d-geometry-template.hpp"
-#include "src/geometry/3d-lines-and-segments-libs.hpp"
+#include "src/geometry/3d_geometry_template.hpp"
+#include "src/geometry/3d_lines_and_segments_libs.hpp"
 
 using namespace std;
 
