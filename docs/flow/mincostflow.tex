@@ -1,0 +1,11 @@
+\subsection{最小費用流}
+
+最小費用流問題を解くアルゴリズム。計算量は$O(FE\log V)$
+
+\begin{itemize}
+    \item MinCostFlow flow(V): 構造体の宣言。Vは頂点数。
+    \item flow.add$\_$edge(u, v, c, d): u → v に容量c, コストdの辺を追加する
+    \item flow.min$\_$cost$\_$flow(s, t, F): s → tに流量Fを流すときの最小コストを返す。流せない場合は-1を返す。
+\end{itemize}
+
+\lstinputlisting[firstline=5]{src/flow/mincostflow.hpp}
