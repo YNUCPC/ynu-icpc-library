@@ -22,8 +22,8 @@ struct SCC {
         }
     };
 
-    scc_graph(int n) : _n(n) {}
-    scc_graph() : _n(0) {}
+    SCC(int n) : _n(n) {}
+    SCC() : _n(0) {}
 
     int num_vertices() { return _n; }
 
