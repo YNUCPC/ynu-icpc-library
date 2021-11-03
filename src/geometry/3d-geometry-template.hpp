@@ -73,3 +73,33 @@ inline double abs(const Point3d &p){
 inline double toRad(double theta){
   return theta * M_PI / 180.0;
 }
+
+double distanceLP(Line3d line,Point3d p){
+  return abs(cross(line.p[1]-line.p[0],p-line.p[0])) / abs(line.p[1]-line.p[0]);
+}
+ 
+Point3d project(Segment3d seg,Point3d p){
+  Vector3d base = seg.p[1] - seg.p[0];
+  double t = dot(p-seg.p[0],base) / norm(base);
+  return seg.p[0] + base * t;
+}
+ 
+Point3d reflect(Segment3d seg,Point3d p){
+  return p + (project(seg,p)-p) * 2.0;
+}
+
+bool on_line3d(Line3d line,Point3d p){
+  return equals(abs(cross(line.p[1]-p,line.p[0]-p)),0);
+}
+ 
+bool on_segment3d(Segment3d seg,Point3d p){
+  if( !on_line3d(seg,p) ) return false;
+  double dist[3] = { abs(seg.p[1]-seg.p[0]), abs(p-seg.p[0]), abs(p-seg.p[1]) };  
+  return on_line3d(seg,p) && equals(dist[0],dist[1]+dist[2]);
+}
+
+double distanceSP(Segment3d seg,Point3d p){
+  Point3d r = project(seg,p);
+  if( on_segment3d(seg,r) ) return abs(p-r);
+  return min(abs(seg.p[0]-p),abs(seg.p[1]-p));
+}
