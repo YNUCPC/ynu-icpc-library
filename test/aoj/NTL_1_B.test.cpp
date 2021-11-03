@@ -3,7 +3,8 @@
 #include "src/math/modint.hpp"
 using namespace std;
 
-using mint = Modint<1000000007>;
+constexpr long long MOD = 1000000007;
+using mint = Modint<MOD>;
 
 int main() {
     int m, n;
