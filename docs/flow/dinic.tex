@@ -2,12 +2,10 @@
 
 最大流問題を解くアルゴリズム。計算量は$O(VE^2)$だが実用上かなり高速なことが多い。
 
-\subsubsection*{宣言とメンバ関数}
-
-\begin{enumerate}
+\begin{itemize}
     \item Dinic flow(V): 構造体の宣言。Vは頂点数。
     \item flow.add$\_$edge(u, v, c): u → v に容量cの辺を追加する
     \item flow.max$\_$flow(s, t): s → tの最大流を返す
-\end{enumerate}
+\end{itemize}
 
 \lstinputlisting[firstline=5]{src/flow/dinic.hpp}
