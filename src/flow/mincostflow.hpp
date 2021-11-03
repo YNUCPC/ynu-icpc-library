@@ -50,9 +50,9 @@ struct MinCostFlow {
             f -= d;
             res += d * h[t];
             for (int i = t; i != s; i = prevv[i]) {
-                auto& now = g[prevv[i]][preve[i]];
-                now[1] -= d;
-                g[i][now[3]][1] += d;
+                auto& edge = g[prevv[i]][preve[i]];
+                edge[1] -= d;
+                g[i][edge[3]][1] += d;
             }
         }
         return res;
