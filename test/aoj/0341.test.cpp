@@ -12,8 +12,7 @@ int main() {
     cin >> t >> b;
     n = t.size();
     m = b.size();
-    vector<vector<mint> > dp(n + 1);  // dp[i][j]=tのi文字目までみてbのj文字目までつくる通り
-    for (int i = 0; i <= n; i++) dp[i].resize(m + 1, 0);
+    vector<vector<mint> > dp(n + 1, vector<mint>(m + 1, 0));  // dp[i][j]=tのi文字目までみてbのj文字目までつくる通り
     dp[0][0] = 1;
     for (int i = 0; i < n; i++) {
         for (int j = 0; j <= m; j++) {

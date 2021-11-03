@@ -39,8 +39,8 @@ jobs:
       - name: Cache test cases
         uses: actions/cache@v2
         with:
-          path: /.verify-helper/cache
-          key: ${{ runner.os }}-verify-helper-${{ hashFiles('**.test.cpp') }}
+          path: ./.verify-helper/cache
+          key: ${{ runner.os }}-verify-helper-${{ hashFiles('**/*.test.cpp') }}
           restore-keys: |
             ${{ runner.os }}-verify-helper-
 
