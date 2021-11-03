@@ -32,12 +32,14 @@ struct MinCostFlow {
                 que.pop();
                 if (dis[v] < q.first) continue;
                 for (int i = 0; i < g[v].size(); i++) {
-                    auto now = g[v][i];
-                    if (now[1] > 0 and dis[now[0]] > dis[v] + now[2] + h[v] - h[now[0]]) {
-                        dis[now[0]] = dis[v] + now[2] + h[v] - h[now[0]];
-                        prevv[now[0]] = v;
-                        preve[now[0]] = i;
-                        que.push({dis[now[0]], now[0]});
+                    auto edge = g[v][i];
+                    int to = edge[0];
+                    long long cap = edge[1], cost = edge[2];
+                    if (cap > 0 and dis[to] > dis[v] + cost + h[v] - h[to]) {
+                        dis[to] = dis[v] + cost + h[v] - h[to];
+                        prevv[to] = v;
+                        preve[to] = i;
+                        que.push({dis[to], to});
                     }
                 }
             }
