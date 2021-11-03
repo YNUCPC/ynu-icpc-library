@@ -6,7 +6,7 @@ using namespace std;
 int main() {
     int V, E;
     cin >> V >> E;
-    scc_graph G(V);
+    SCC G(V);
     for (int i = 0; i < E; i++) {
         int s, t;
         cin >> s >> t;
