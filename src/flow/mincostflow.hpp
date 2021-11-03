@@ -20,16 +20,17 @@ struct MinCostFlow {
     long long min_cost_flow(int s, int t, long long f) {
         long long res = 0;
         h.assign(V, 0);
+        using Q = pair<long long, int>;
         while (f > 0) {
-            priority_queue<vector<long long>, vector<vector<long long>>, greater<vector<long long>>> que;
+            priority_queue<Q, vector<Q>, greater<Q>> que;
             dis.assign(V, LLONG_MAX);
             dis[s] = 0;
             que.push({0, s});
             while (que.size()) {
-                int d = que.top()[0];
-                int v = que.top()[1];
+                Q q = que.top();
+                int v = q.second;
                 que.pop();
-                if (dis[v] < d) continue;
+                if (dis[v] < q.first) continue;
                 for (int i = 0; i < g[v].size(); i++) {
                     auto now = g[v][i];
                     if (now[1] > 0 and dis[now[0]] > dis[v] + now[2] + h[v] - h[now[0]]) {
