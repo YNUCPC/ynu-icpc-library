@@ -40,7 +40,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: /.verify-helper/cache
-          key: ${{ runner.os }}-verify-helper-${{ hashFiles('**/test.cpp') }}
+          key: ${{ runner.os }}-verify-helper-${{ hashFiles('**.test.cpp') }}
           restore-keys: |
             ${{ runner.os }}-verify-helper-
 
