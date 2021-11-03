@@ -9,6 +9,8 @@ int op(int a, int b) { return min(a, b); }
 constexpr int e() { return INF; }
 
 int main() {
+    cin.tie(nullptr);
+    ios::sync_with_stdio(false);
     int n, q;
     cin >> n >> q;
     SegmentTree<int, op, e> seg(n);
