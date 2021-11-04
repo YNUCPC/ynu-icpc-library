@@ -11,9 +11,6 @@ bool GT(double x, double y){ return !equals(x,y) && x > y; }
 bool LT(double x, double y){ return !equals(x,y) && x < y; }
 bool ELT(double x, double y){ return equals(x,y) || x < y; }
 
-#define REP(i,s,n) for(int i=s;i<n;++i)
-#define rep(i,n) REP(i,0,n)
-
 const string Y = "YES",N = "NO";
 
 int main(){
