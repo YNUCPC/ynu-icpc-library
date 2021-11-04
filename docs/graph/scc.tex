@@ -1,10 +1,10 @@
-\subsection{scc}
+\subsection{Strongly Connected Components}
 
 有向グラフを強連結成分分解する。計算量は $O(V + E)$
 \begin{itemize}
-    \item scc\_graph graph(int V) : コンストラクタ. $V$ 頂点 $E$ 辺の有向グラフを作る.
-    \item void graph.add\_edge(int from, int to) : 頂点 from から 頂点 to へ有向辺を足す.
-    \item pair\verb|<|
+    \item SCC(int V) : コンストラクタ. $V$ 頂点 $E$ 辺の有向グラフを作る.
+    \item void add\_edge(int from, int to) : 頂点 from から 頂点 to へ有向辺を足す.
+    \item pair\verb|<|int, vector\verb|<|int\verb|>>| scc\_ids() : \\ (SCCの個数, SCCのid) を返す. id[v] := 頂点 $v$ が属する連結成分の番号
     \item vector\verb|<|vector\verb|<|int\verb|>>|  graph.scc() : \\ 次の条件を満たす「頂点のリスト」のリストを返す.
     \begin{itemize}
         \item 全ての頂点がちょうど 1 つずつ、どれかのリストに含まれる.
