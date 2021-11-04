@@ -1,0 +1,16 @@
+\subsection{2-SAT}
+
+$n$ 変数 $x_0, x_1, \dots, x_{n-1}$ に関して、
+\begin{align*}
+    (x_i = f) \vee (x_j = g)
+\end{align*}
+というクローズを足し、これを全て満たす変数の割り当てがあるか、という問題を解く。
+\begin{itemize}
+    \item two\_sat(n) : n 変数の 2-SAT を作る。$O(n)$
+    \item void add\_clause(i, f, j, g) : クローズ $(x_i = f) \vee (x_j = g)$ を足す。ならし $O(1)$
+    \item bool satisfiable() : \\ (割り当てが存在する ? true : false). クローズの個数を $m$ として $O(n + m)$
+    \item vector\verb|<|bool\verb|>| answer() :\\ 最後に呼んだ satisfiable のクローズを満たす割り当てを返す。
+    satisfiable を呼ぶ前や、割り当てがない場合、中身が未定義の長さ $n$ の vector を返す。$O(n)$
+\end{itemize}
+
+\lstinputlisting[firstline=6]{src/graph/two_sat.hpp}

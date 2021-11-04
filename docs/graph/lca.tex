@@ -1,0 +1,10 @@
+\subsection{Lowest Common Ancestor}
+
+木の最近共通祖先(Lowest Common Ancestor: LCA)をダブリングにより求める。前計算：時間・空間ともに $O(V \log V)$、クエリあたり：$O(\log V)$ である。
+\begin{itemize}
+    \item LCA(G, r) : 木 $G$ と 根 $r$ から、前計算する。
+    \item int query(u, v) : LCA($u,v$) を求める.
+    \item bool is\_on\_path(u, v, a) : 頂点 $a$ が 頂点 $u, v$ を結ぶパス上に存在するかどうか
+\end{itemize}
+
+\lstinputlisting[firstline=5]{src/graph/lca.hpp}
