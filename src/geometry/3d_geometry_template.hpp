@@ -48,8 +48,8 @@ struct Segment3d{
  }
 };
  
-typedef Point3d Vector3d;
-typedef Segment3d Line3d;
+using Line3d = Segment3d;
+using Vector3d = Point3d;
   
 ostream& operator << (ostream& os,const Point3d& p){
   return os << "(" << p.x << "," << p.y << "," << p.z << ")";
