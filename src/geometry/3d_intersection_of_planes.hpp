@@ -1,6 +1,6 @@
 #pragma once
 
-typedef pair<Point3d,bool> P3db;
+using P3db = pair<Point3d, bool>;
 
 /* 
 [*] Input:
