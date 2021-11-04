@@ -1,0 +1,11 @@
+\subsection{Rolling Hash}
+
+文字列（または数列）をHash値に変換することで、部分文字列の一致判定を$O(1)$で行うアルゴリズム
+
+\begin{itemize}
+    \item RollingHash(string str) : コンストラクタ。init(str)を実行する。
+    \item void init(string str) : 長さ$n$の文字列$str$のハッシュ値を求める。計算量$O(n)$
+    \item bool match(rh1, l1, r1, rh2, l2, r2) : 文字列$s_1,s_2$のRolling Hashを rh1, rh2 として、$s_1[l_1,r_1), s_2[l_2,r_2)$が一致しているか判定する
+\end{itemize}
+
+\lstinputlisting[firstline=5]{src/string/rolling_hash.hpp}
