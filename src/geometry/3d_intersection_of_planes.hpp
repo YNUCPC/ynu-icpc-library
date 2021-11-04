@@ -12,19 +12,22 @@ using P3db = pair<Point3d, bool>;
 P3db intersectPlPl(const Plane3d &pl1,const Plane3d &pl2){
   Vector3d v = cross(pl1.normal_vector,pl2.normal_vector);
   if( !equals(v.x,0.0) ){
-    return P3db(Point3d(0,
-                        (pl1.d*pl2.normal_vector.z-pl2.d*pl1.normal_vector.z)/v.x,
-                        (pl1.d*pl2.normal_vector.y-pl2.d*pl1.normal_vector.y)/(-v.x)),true);
+    Point3d p(0,
+              (pl1.d*pl2.normal_vector.z-pl2.d*pl1.normal_vector.z)/v.x,
+              (pl1.d*pl2.normal_vector.y-pl2.d*pl1.normal_vector.y)/(-v.x));
+    return P3db(p, true);
   }
   if( !equals(v.y,0.0) ){
-    return P3db(Point3d((pl1.d*pl2.normal_vector.z-pl2.d*pl1.normal_vector.z)/(-v.y),
-                         0,
-                        (pl1.d*pl2.normal_vector.x-pl2.d*pl1.normal_vector.x)/v.y),true);
+    Point3d p((pl1.d*pl2.normal_vector.z-pl2.d*pl1.normal_vector.z)/(-v.y),
+              0,
+              (pl1.d*pl2.normal_vector.x-pl2.d*pl1.normal_vector.x)/v.y);
+    return P3db(p,true);
   }
   if( !equals(v.z,0.0) ){
-    return P3db(Point3d((pl1.d*pl2.normal_vector.y-pl2.d*pl1.normal_vector.y)/v.z,
-                        (pl1.d*pl2.normal_vector.x-pl2.d*pl1.normal_vector.x)/(-v.z),
-                        0),true);
+    Point3d p((pl1.d*pl2.normal_vector.y-pl2.d*pl1.normal_vector.y)/v.z,
+              (pl1.d*pl2.normal_vector.x-pl2.d*pl1.normal_vector.x)/(-v.z),
+              0);
+    return P3db(p,true);
   }
   return P3db(Point3d(),false);//平行なのでそのような交線は存在しない
 }
