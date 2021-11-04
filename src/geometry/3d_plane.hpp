@@ -37,7 +37,6 @@ public:
     double res1 = dot(a-seg.p[0],normal_vector);
     double res2 = dot(a-seg.p[1],normal_vector);
     if( res1 > res2 ) swap(res1,res2);
-    //cout << res1 << " < " << res2 << endl;
     if( ( equals(res1,0.0) || res1 < 0 ) && ( equals(res2,0.0) || res2 > 0 ) ) return true;
     return false;
   }
