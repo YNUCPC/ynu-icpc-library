@@ -1,0 +1,12 @@
+\subsection{Trie木}
+
+文字列の集合$\{s_0, s_1, \ldots, s_m \}$に対して、文字列$t$、または$t$のprefixと一致する文字列を高速に検索できる木構造。
+
+各nodeが文字列のprefixに対応している。
+
+\begin{itemize}
+    \item add(string str) : 長さ$n$の文字列$\mathit{str}$をTrie木に追加する。計算量$O(n)$
+    \item find(string str) : 長さ$n$の文字列$\mathit{str}$に対応するnodeのindexを求める。存在しない場合、-1を返す。計算量$O(n)$
+\end{itemize}
+
+\lstinputlisting[firstline=5]{src/string/trie.hpp}
