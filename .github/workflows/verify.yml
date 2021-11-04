@@ -7,6 +7,7 @@ on:
   pull_request:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   skip-check:
@@ -18,7 +19,7 @@ jobs:
       - id: skip_check
         uses: fkirc/skip-duplicate-actions@master
         with:
-          skip_after_successful_duplicate: 'true'
+          skip_after_successful_duplicate: 'false'
           paths: '["**.hpp", "**.cpp"]'
 
   oj-verify:
