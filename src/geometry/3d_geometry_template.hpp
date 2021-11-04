@@ -25,7 +25,12 @@ public:
     return Point3d(x/d,y/d,z/d);
   }
  
-  bool operator < (const Point3d& p)const { return !equals(x,p.x)?x<p.x:((!equals(y,p.y))?y<p.y:(!equals(z,p.z)&&z<p.z)); }
+  bool operator < (const Point3d& p)const {
+    if(!equals(x, p.x)) return x < p.x;
+    if(!equals(y, p.y)) return y < p.y;
+    if(!equals(z, p.z)) return z < p.z;
+    return false;
+  }
  
   bool operator == (const Point3d& p)const{
     return equals(x,p.x) && equals(y,p.y) && equals(z,p.z);
