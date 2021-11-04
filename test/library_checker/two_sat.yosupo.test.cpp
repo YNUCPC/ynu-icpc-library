@@ -7,7 +7,7 @@ int main() {
     string tmp;
     int N, M;
     cin >> tmp >> tmp >> N >> M;
-    two_sat ts(N);
+    TwoSAT ts(N);
     for (int i = 0; i < M; i++) {
         int a, b;
         cin >> a >> b >> tmp;
