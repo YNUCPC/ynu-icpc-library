@@ -2,8 +2,8 @@
 
 class Plane3d{
 public:
-  Point3d normal_vector; //法線ベクトル
-  double d; // 平面方程式 normal_vector.x * x + normal_vector.y * y + normal_vector.z * z + d = 0
+  Point3d normal_vector;  // 法線ベクトル
+  double d;               // 平面方程式 normal_vector = (a,b,c), a*x + b*y + c*z + d = 0
  
   Plane3d(Point3d normal_vector=Point3d(),double d=0):normal_vector(normal_vector),d(d){}
   Plane3d(Vector3d a,Vector3d b,Vector3d c){
