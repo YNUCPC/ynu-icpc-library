@@ -28,7 +28,6 @@ struct SCC {
     int num_vertices() { return _n; }
 
     void add_edge(int from, int to) {
-        int n = num_vertices();
         edges.push_back({from, {to}});
     }
 
