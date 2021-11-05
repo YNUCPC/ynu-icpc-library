@@ -1,0 +1,10 @@
+\subsection{Suffix Array}
+
+文字列のsuffix(接尾辞)の開始位置の配列をsuffixの辞書順でソートした配列を求めるアルゴリズム
+
+\begin{itemize}
+    \item suffix\_array(str) : 長さ$n$の文字列$str$のsuffix arrayを求める。計算量$O(n\log^2 n)$
+    \item contain(s, t, sa) : 文字列$s,t$と$s$のsuffix array $sa$ より$s$に$t$が含まれているかを判定する。$O(|t| \log |s|)$
+\end{itemize}
+
+\lstinputlisting[firstline=5]{src/string/suffix_array.hpp}
