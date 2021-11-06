@@ -32,7 +32,7 @@ P3db intersectPlPl(const Plane3d& pl1, const Plane3d& pl2) {
     return P3db(Point3d(), false);  //平行なのでそのような交線は存在しない
 }
 
-/* 
+/*
 [*] Input:
     ２つの平面 plane, plane2 とその交線上の任意の１点
 [*] Output:
