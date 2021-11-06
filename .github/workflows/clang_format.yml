@@ -1,0 +1,30 @@
+# This file is in reference to https://github.com/marketplace/actions/clang-format-check#multiple-paths
+name: clang-format check
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  formatting-check:
+    name: formatting check
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        path:
+          - 'src'
+          - 'test'
+
+    steps:
+    - name: Set up Git repository
+      uses: actions/checkout@v2
+
+    - name: Run clang-format style check for C/C++ programs
+      uses: jidicula/clang-format-action@v4.2.0
+      with:
+        clang-format-version: '13'
+        check-path: ${{ matrix.path }}
