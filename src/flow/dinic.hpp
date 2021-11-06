@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-//Dinic法 O(V^2E)
+// Dinic法 O(V^2E)
 struct Dinic {
     int V;                                    // 頂点数
     vector<vector<vector<long long>>> graph;  // グラフ

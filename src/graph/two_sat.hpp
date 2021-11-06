@@ -27,5 +27,5 @@ struct TwoSAT {
   private:
     int _n;
     vector<bool> _answer;
-    SCC scc; // 強連結成分分解を用いる
+    SCC scc;  // 強連結成分分解を用いる
 };
