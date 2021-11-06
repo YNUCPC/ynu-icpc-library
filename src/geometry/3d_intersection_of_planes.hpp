@@ -2,7 +2,7 @@
 
 using P3db = pair<Point3d, bool>;
 
-/* 
+/*
 [*] Input:
     ２つの平面 pl1, pl2
 [*] Output:
