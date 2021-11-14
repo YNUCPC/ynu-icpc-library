@@ -1,0 +1,14 @@
+\subsection{高速ゼータ変換・メビウス変換}
+
+部分集合に対するゼータ変換・メビウス変換を集合の要素数を$n$として$O(n2^n)$で行うアルゴリズム。
+
+bitwise AND畳み込みやbitwise OR畳み込みを高速化できる。
+
+\begin{itemize}
+    \item subset\_zeta(f, n, inv) : 長さ$2^n$の配列$f$の下位集合ゼータ変換$F[S] = \sum_{X \subseteq S} f(X)$を求める。
+    \item supset\_zeta(f, n, inv) : 長さ$2^n$の配列$f$の上位集合ゼータ変換$F[S] = \sum_{X \supseteq S} f(X)$を求める。
+\end{itemize}
+
+inv=true のとき逆変換としてメビウス変換を行い、$F$から$f$を求める。
+
+\lstinputlisting[firstline=5]{src/math/subset_zeta.hpp}
