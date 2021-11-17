@@ -46,4 +46,12 @@ struct Modint {
     mint operator*(const mint rhs) const { return mint(*this) *= rhs; }
     mint operator/(const mint rhs) const { return mint(*this) /= rhs; }
     mint operator-() const { return mint() - *this; }  // 単項
+    // 入出力ストリーム
+    friend ostream& operator<<(ostream& os, const mint& p) { return os << p.v; }
+    friend istream& operator>>(istream& is, mint& p) {
+        int64_t t;
+        is >> t;
+        p = mint(t);
+        return (is);
+    }
 };
