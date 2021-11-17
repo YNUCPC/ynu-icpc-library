@@ -15,14 +15,10 @@ int main() {
     cin >> n;
     vector<mint> a(1 << n), b(1 << n);
     for (int i = 0; i < 1 << n; i++) {
-        ll x;
-        cin >> x;
-        a[i] = x;
+        cin >> a[i];
     }
     for (int i = 0; i < 1 << n; i++) {
-        ll x;
-        cin >> x;
-        b[i] = x;
+        cin >> b[i];
     }
     // ゼータ変換
     vector<mint> A = supset_zeta(a, n, false), B = supset_zeta(b, n, false);
@@ -35,7 +31,7 @@ int main() {
     vector<mint> c = supset_zeta(C, n, true);
 
     for (int i = 0; i < 1 << n; i++) {
-        cout << c[i].val() << " \n"[i == (1 << n) - 1];
+        cout << c[i] << " \n"[i == (1 << n) - 1];
     }
     return 0;
 }
