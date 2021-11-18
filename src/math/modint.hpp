@@ -49,7 +49,7 @@ struct Modint {
     // 入出力ストリーム
     friend ostream& operator<<(ostream& os, const mint& p) { return os << p.v; }
     friend istream& operator>>(istream& is, mint& p) {
-        int64_t t;
+    long long t;
         is >> t;
         p = mint(t);
         return (is);
