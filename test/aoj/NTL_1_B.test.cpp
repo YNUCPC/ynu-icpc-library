@@ -7,9 +7,9 @@ constexpr long long MOD = 1000000007;
 using mint = Modint<MOD>;
 
 int main() {
-    int m, n;
+    mint m;
+    int n;
     cin >> m >> n;
-    mint ans = mint(m).pow(n);
-    cout << ans.val() << endl;
+    cout << m.pow(n) << endl;
     return 0;
 }

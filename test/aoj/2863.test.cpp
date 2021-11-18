@@ -53,5 +53,5 @@ int main() {
             }
         }
     }
-    cout << dp[m].val() << endl;
+    cout << dp[m] << endl;
 }
