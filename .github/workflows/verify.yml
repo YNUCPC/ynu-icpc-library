@@ -46,5 +46,7 @@ jobs:
             ${{ runner.os }}-verify-helper-
 
       - name: Run tests
+        env:
+          DROPBOX_TOKEN: ${{ secrets.ATCODER_DROPBOX_TOKEN }}
         run: oj-verify run --jobs 2
 
