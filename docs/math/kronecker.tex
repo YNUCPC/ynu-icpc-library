@@ -1,0 +1,12 @@
+\subsection{高速アダマール変換}
+クロネッカー冪行列をベクトルに掛ける計算を高速に行うアルゴリズム。
+
+配列の長さは $2^n$ であるとする。計算量は $O(n 2^n)$ である。
+
+\begin{itemize}
+    \item fwht(a, inv) : 配列 $a$ を高速にアダマール変換する。inv=true のとき逆変換する。
+    \item xor\_convolution(a, b) : bitwise XOR畳み込み後の配列 c を返す。
+    \item and\_convolution(a, b) : bitwise AND畳み込み後の配列 c を返す。
+    \item or\_convolution(a, b) : bitwise OR畳み込み後の配列 c を返す。
+\end{itemize}
+\lstinputlisting[firstline=5]{src/math/kronecker.hpp}
