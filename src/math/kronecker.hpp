@@ -29,9 +29,9 @@ struct Kronecker {
     static vector<T> xor_convolution(vector<T>& a, vector<T>& b) {
         fwht(a, false);
         fwht(b, false);
-        vector<T> c;
-        for (int i = 0; i < (int)a.size(); i++)
-            c.push_back(a[i] * b[i]);
+        int n = a.size();
+        vector<T> c(n);
+        for (int i = 0; i < n; i++) c[i] = a[i] * b[i];
         fwht(c, true);
         return c;
     }
