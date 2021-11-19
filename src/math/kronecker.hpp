@@ -40,9 +40,9 @@ struct Kronecker {
     static vector<T> and_convolution(vector<T>& a, vector<T>& b) {
         mul(a, T(1), T(1), T(0), T(1));
         mul(b, T(1), T(1), T(0), T(1));
-        vector<T> c;
-        for (int i = 0; i < (int)a.size(); i++)
-            c.push_back(a[i] * b[i]);
+        int n = a.size();
+        vector<T> c(n);
+        for (int i = 0; i < n; i++) c[i] = a[i] * b[i];
         mul(c, T(1), T(-1), T(0), T(1));
         return c;
     }
