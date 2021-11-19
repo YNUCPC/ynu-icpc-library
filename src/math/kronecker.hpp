@@ -5,8 +5,9 @@ using namespace std;
 struct Kronecker {
     template <class T>
     static void mul(vector<T>& x, T a, T b, T c, T d) {
-        for (int j = 1; j < (int)x.size(); j <<= 1) {
-            for (int i = 0; i < (int)x.size(); i++) {
+        int n = x.size();
+        for (int j = 1; j < n; j <<= 1) {
+            for (int i = 0; i < n; i++) {
                 if ((i & j) == 0) {
                     T s = a * x[i] + b * x[i + j];
                     T t = c * x[i] + d * x[i + j];
