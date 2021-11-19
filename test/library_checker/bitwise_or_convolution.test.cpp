@@ -10,10 +10,8 @@ int main() {
     int N;
     cin >> N;
     vector<mint> a(1 << N), b(1 << N);
-    for (int i = 0; i < (1 << N); i++)
-        cin >> a[i];
-    for (int i = 0; i < (1 << N); i++)
-        cin >> b[i];
+    for (int i = 0; i < (1 << N); i++) cin >> a[i];
+    for (int i = 0; i < (1 << N); i++) cin >> b[i];
 
     // bitwise OR convolution
     reverse(a.begin(), a.end());
