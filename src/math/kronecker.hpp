@@ -20,9 +20,9 @@ struct Kronecker {
     template <class T>
     static void fwht(vector<T>& a, bool inv) {
         mul(a, T(1), T(1), T(1), T(-1));
-        if (inv)
-            for (T& x : a)
-                x /= T(a.size());
+        if (inv) {
+            for (T& x : a) x /= T(a.size());
+        }
     }
 
     template <class T>
