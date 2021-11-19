@@ -6,8 +6,7 @@ using namespace std;
 
 using mint = Modint<998244353>;
 
-int main()
-{
+int main() {
     int N;
     cin >> N;
     vector<mint> a(1 << N), b(1 << N);
@@ -22,8 +21,7 @@ int main()
     vector<mint> c = Kronecker::or_convolution(a, b);
     reverse(c.begin(), c.end());
 
-    for (int i = 0; i < (1 << N); i++)
-    {
+    for (int i = 0; i < (1 << N); i++) {
         cout << c[i] << " \n"[i == (1 << N) - 1];
     }
 }
