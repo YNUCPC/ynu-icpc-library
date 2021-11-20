@@ -1,11 +1,12 @@
-BasedOnStyle: 'Chromium'
+BasedOnStyle: Chromium
 IndentWidth: 4
 AccessModifierOffset: -2
 ColumnLimit: 0
 SortIncludes: false
 
 # for competitive programing
+AllowShortBlocksOnASingleLine: Always
 AllowShortFunctionsOnASingleLine: All
 AllowShortIfStatementsOnASingleLine: true
 AllowShortLoopsOnASingleLine: true
-AlwaysBreakTemplateDeclarations: false
+AlwaysBreakTemplateDeclarations: No
