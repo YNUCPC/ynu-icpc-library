@@ -1,0 +1,17 @@
+\subsection{拡張ユークリッド互除法}
+
+2つの整数 $a,b$ について $ax + by = \gcd(a,b)$ の整数解 $(x, y)$ を求めるアルゴリズム。計算量は $O(\log a)$。
+また、追加で以下の条件を満たす。
+
+\begin{itemize}
+    \item すべての整数解$(x,y)$のうち、$|x| + |y|$が最小である解を求める。
+    \item $\gcd(a,b) \neq \min(a, b)$ のとき $|x| \le \left|\frac{b}{2\gcd(a,b)}\right|, |y| \le \left|\frac{a}{2\gcd(a,b)}\right|$
+\end{itemize}
+
+\subsubsection*{使用方法}
+
+\begin{itemize}
+    \item extgcd(a, b, x, y) : x, yに解を格納する。返り値として $\gcd(a,b)$を返す。
+\end{itemize}
+
+\lstinputlisting[firstline=5]{src/math/extgcd.hpp}
