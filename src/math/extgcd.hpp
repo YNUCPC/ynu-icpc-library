@@ -4,7 +4,7 @@ using namespace std;
 
 template <class T>
 T extgcd(T a, T b, T& x, T& y) {
-    if (b > 0) {
+    if (b != 0) {
         T d = extgcd(b, a % b, y, x);
         y -= (a / b) * x;
         return d;
