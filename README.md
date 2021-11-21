@@ -6,7 +6,8 @@
 
 ライブラリの内容は以下のリンクから参照できます。
 
-- [YNU ICPC Library(PDF)](https://ynucpc.github.io/ynu-icpc-library/main.pdf)
+- [YNU ICPC Library (PDF, 縦1段組ver)](https://ynucpc.github.io/ynu-icpc-library/main_1col.pdf)
+- [YNU ICPC Library (PDF, 横2段組ver)](https://ynucpc.github.io/ynu-icpc-library/main_2col.pdf)
 
 ## 方針
 
