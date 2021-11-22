@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
@@ -22,17 +25,19 @@ jobs:
           bunzip2 jlisting.sty.bz2
 
       - name: Make PDF
-        run: docker run --rm -v $PWD:/workdir paperist/texlive-ja:latest latexmk main.tex
+        run: |
+          docker run --rm -v $PWD:/workdir paperist/texlive-ja:latest latexmk main_1col.tex
+          docker run --rm -v $PWD:/workdir paperist/texlive-ja:latest latexmk main_2col.tex
 
       - name: Move to output
         run: |
           mkdir -p output
-          mv main.pdf output
+          mv main_*.pdf output
 
       - uses: actions/upload-artifact@v2
         with:
           name: library-PDF
-          path: output/main.pdf
+          path: output/main_*.pdf
 
       - name: Deploy PDF to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

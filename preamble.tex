@@ -1,12 +1,9 @@
-\documentclass[12pt,a4paper,dvipdfmx]{jsarticle}
-% \documentclass[12pt,a4paper,landscape,twocolumn,dvipdfmx]{jsarticle}  % 用紙横向き、二段組
-
 \usepackage[margin=15mm]{geometry}  % 余白調整
-\usepackage{fancyhdr}
-\usepackage{listings,jlisting}
-\usepackage{color}
-\usepackage{amsmath,amssymb}
-\usepackage{lastpage}
+\usepackage{fancyhdr}  % ヘッダー・フッターの書式
+\usepackage{listings,jlisting}  % コードブロック
+\usepackage{color}  % 文字に色をつける
+\usepackage{amsmath,amssymb}  % 数式
+\usepackage{lastpage}  % 総ページ数の取得
 
 % ヘッダー・フッターの設定
 \pagestyle{fancy}
@@ -40,27 +37,3 @@
   lineskip=-0.5ex, % 行間隔
   tabsize=4,
 }
-
-\title{YNU ICPC Library}
-\author{}
-\date{}
-
-
-\begin{document}
-
-% \maketitle
-
-% 目次の出力
-\tableofcontents
-\clearpage
-
-% 本文
-\input{docs/template.tex}
-\input{docs/graph.tex}
-\input{docs/flow.tex}
-\input{docs/math.tex}
-\input{docs/datastructure.tex}
-\input{docs/string.tex}
-\input{docs/geometry.tex}
-
-\end{document}
