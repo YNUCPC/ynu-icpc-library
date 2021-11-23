@@ -73,3 +73,12 @@ latexmk main.tex
     ...
     \input{docs/<hoge>/<fuga>.tex}
     ```
+
+## License
+
+YNU CPC Library は、[MIT License](https://opensource.org/licenses/MIT) のもとで公開されています。
+ただし、プログラミングコンテストや Online Judge のジャッジサーバーに提出する目的でこのライブラリを使用する場合は、提出物に著作権表示や許諾表示をすることなく、このライブラリを使用することができます。
+ライセンス全文は [LICENSE](https://github.com/YNUCPC/ynu-icpc-library/blob/main/LICENSE) を参照してください。
+
+YNU CPC Library is licensed under the [MIT License](https://opensource.org/licenses/MIT). However, if you use this library for submission to the judge server of a programming contest or online judge, you can use this library without any copyright and permission notices on your submission.
+See [LICENSE](https://github.com/YNUCPC/ynu-icpc-library/blob/main/LICENSE) for the full license text.
