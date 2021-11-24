@@ -1,6 +1,6 @@
 #define PROBLEM "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0341"
 #include <bits/stdc++.h>
-#include "src/math/modint.hpp"
+#include "../../src/math/modint.hpp"
 using namespace std;
 
 constexpr long long MOD = 1000000007;

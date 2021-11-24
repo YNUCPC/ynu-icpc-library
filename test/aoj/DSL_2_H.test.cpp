@@ -1,6 +1,6 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_H"
 #include <bits/stdc++.h>
-#include "src/datastructure/lazysegtree.hpp"
+#include "../../src/datastructure/lazysegtree.hpp"
 
 int op(int a, int b) { return min(a, b); }
 int e() { return INT32_MAX; }

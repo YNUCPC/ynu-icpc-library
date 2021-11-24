@@ -1,7 +1,7 @@
 #define PROBLEM "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2562"
-#include "src/geometry/3d_geometry_template.hpp"
-#include "src/geometry/3d_plane.hpp"
-#include "src/geometry/3d_intersection_of_planes.hpp"
+#include "../../src/geometry/3d_geometry_template.hpp"
+#include "../../src/geometry/3d_plane.hpp"
+#include "../../src/geometry/3d_intersection_of_planes.hpp"
 
 #define REP(i, s, n) for (int i = s; i < n; i++)
 #define rep(i, n) REP(i, 0, n)

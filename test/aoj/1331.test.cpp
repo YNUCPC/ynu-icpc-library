@@ -1,6 +1,6 @@
 #define PROBLEM "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=1331"
 #include <bits/stdc++.h>
-#include "src/geometry/3d_geometry_template.hpp"
+#include "../../src/geometry/3d_geometry_template.hpp"
 using namespace std;
 
 #define REP(i, s, n) for (int i = s; i < n; i++)

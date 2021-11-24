@@ -1,6 +1,6 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_A"
 #include <bits/stdc++.h>
-#include "src/datastructure/segtree.hpp"
+#include "../../src/datastructure/segtree.hpp"
 using namespace std;
 
 constexpr int INF = INT32_MAX;
