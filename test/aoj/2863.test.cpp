@@ -1,8 +1,8 @@
 #define PROBLEM "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2863"
 #include <bits/stdc++.h>
-#include "src/math/modint.hpp"
-#include "src/string/rolling_hash.hpp"
-#include "src/string/trie.hpp"
+#include "../../src/math/modint.hpp"
+#include "../../src/string/rolling_hash.hpp"
+#include "../../src/string/trie.hpp"
 using namespace std;
 
 #define REP(i, n) for (int i = 0; i < n; i++)

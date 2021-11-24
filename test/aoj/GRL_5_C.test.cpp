@@ -1,6 +1,6 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/5/GRL/5/GRL_5_C"
 #include <bits/stdc++.h>
-#include "src/graph/lca.hpp"
+#include "../../src/graph/lca.hpp"
 using namespace std;
 
 int main() {

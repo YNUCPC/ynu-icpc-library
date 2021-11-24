@@ -1,6 +1,6 @@
 #define PROBLEM "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2977"
 #include <bits/stdc++.h>
-#include "src/math/FFT.hpp"
+#include "../../src/math/FFT.hpp"
 using namespace std;
 
 // test FFT convolution

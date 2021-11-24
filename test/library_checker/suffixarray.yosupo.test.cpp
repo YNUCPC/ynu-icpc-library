@@ -1,6 +1,6 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/suffixarray"
 #include <bits/stdc++.h>
-#include "src/string/suffix_array.hpp"
+#include "../../src/string/suffix_array.hpp"
 using namespace std;
 
 int main() {

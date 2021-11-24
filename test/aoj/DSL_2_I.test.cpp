@@ -1,6 +1,6 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/3/DSL/2/DSL_2_I"
 #include <bits/stdc++.h>
-#include "src/datastructure/lazysegtree.hpp"
+#include "../../src/datastructure/lazysegtree.hpp"
 
 using ll = long long;
 using S = pair<ll, ll>;

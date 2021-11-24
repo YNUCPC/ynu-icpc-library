@@ -1,6 +1,6 @@
 #pragma once
 #include <bits/stdc++.h>
-#include "src/graph/scc.hpp"
+#include "scc.hpp"
 using namespace std;
 
 struct TwoSAT {

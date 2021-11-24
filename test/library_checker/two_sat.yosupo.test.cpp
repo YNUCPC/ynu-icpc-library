@@ -1,6 +1,6 @@
 #define PROBLEM "https://judge.yosupo.jp/problem/two_sat"
 #include <bits/stdc++.h>
-#include "src/graph/two_sat.hpp"
+#include "../../src/graph/two_sat.hpp"
 using namespace std;
 
 int main() {

@@ -1,6 +1,6 @@
 #define PROBLEM "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_6_B"
 #include <bits/stdc++.h>
-#include "src/flow/mincostflow.hpp"
+#include "../../src/flow/mincostflow.hpp"
 using namespace std;
 
 int main() {

@@ -1,6 +1,6 @@
 #define PROBLEM "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_14_D"
 #include <bits/stdc++.h>
-#include "src/string/suffix_array.hpp"
+#include "../../src/string/suffix_array.hpp"
 using namespace std;
 
 int main() {
