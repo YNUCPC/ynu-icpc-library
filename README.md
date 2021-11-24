@@ -81,5 +81,5 @@ YNU ICPC Library は、[MIT License](https://opensource.org/licenses/MIT) のも
 ライセンス全文は [LICENSE](https://github.com/YNUCPC/ynu-icpc-library/blob/main/LICENSE) を参照してください。
 
 YNU ICPC Library is licensed under the [MIT License](https://opensource.org/licenses/MIT).
-However, if you use this library for submission to the judge server of a programming contest or online judge, you can use this library without any copyright and permission notices on your submission.
+However, you can use this library for submission to the judge server of a programming contest or online judges without any copyright or permission notices on your submission.
 See [LICENSE](https://github.com/YNUCPC/ynu-icpc-library/blob/main/LICENSE) for the full license text.
