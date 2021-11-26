@@ -38,7 +38,7 @@ struct RollbackUnionFind {
 
     void snapshot() { inner_snap = int(history.size() >> 1); }
 
-    int get_state(){ return int(history.size() >> 1); }
+    int state() { return int(history.size() >> 1); }
 
     void rollback(int state = -1) {
         if (state == -1) state = inner_snap;
