@@ -3,11 +3,11 @@
 経路圧縮を行わないことで undo 可能にした UnionFind。
 \begin{itemize}
     \item RollbackUnionFind(n) : 大きさ $n$ の UnionFind を生成する。
-    \item unite(x,y) : $x$ と $y$ のマージに成功したら true 失敗したら false を返す。 $O(\log{n})$
     \item find(x) : $x$ の根を返す。 $O(\log{n})$
+    \item unite(x,y) : $x$ と $y$ のマージに成功したら true 失敗したら false を返す。 $O(\log{n})$
     \item undo() : 直前の unite 操作を取り消す。 $O(1)$ 
+    \item time() : 現在までに unite() が呼ばれた回数を返す。 $O(1)$
     \item snapshot() : 現在の UnionFind の状態を保存する。$O(1)$
-    \item state() : 現在までに unite() が呼ばれた回数を返す。 $O(1)$
     \item rollback(t) : 
     \begin{itemize}
         \item $t = -1$ のとき : snapshot() で保存した状態まで巻き戻す。
