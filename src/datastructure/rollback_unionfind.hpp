@@ -8,6 +8,7 @@ struct RollbackUnionFind {
     int inner_snap = 0;
     RollbackUnionFind(int n) { data.resize(n, -1); }
 
+int find(int x) { return data[x] < 0 ? x : find(data[x]); }
     bool unite(int x, int y) {
         x = find(x);
         y = find(y);
