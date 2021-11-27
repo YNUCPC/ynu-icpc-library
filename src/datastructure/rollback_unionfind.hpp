@@ -34,9 +34,8 @@ int find(int x) { return data[x] < 0 ? x : find(data[x]); }
 
     int state() { return int(history.size() >> 1); }
 
-    void rollback(int state = -1) {
-        if (state == -1) state = inner_snap;
-        state <<= 1;
-        while (state < (int)history.size()) undo();
+    void rollback(int t = -1) {
+        if (t == -1) t = inner_snap;
+        while (t < state()) undo();
     }
 };
