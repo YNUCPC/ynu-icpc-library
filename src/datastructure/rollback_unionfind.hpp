@@ -10,8 +10,7 @@ struct RollbackUnionFind {
 
 int find(int x) { return data[x] < 0 ? x : find(data[x]); }
     bool unite(int x, int y) {
-        x = find(x);
-        y = find(y);
+        x = find(x), y = find(y);
         history.push({x, data[x]});
         history.push({y, data[y]});
         if (x == y) return false;
