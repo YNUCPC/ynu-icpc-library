@@ -8,10 +8,10 @@
     \item undo() : 直前の unite 操作を取り消す。 $O(1)$ 
     \item snapshot() : 現在の UnionFind の状態を保存する。$O(1)$
     \item state() : 現在までに unite() が呼ばれた回数を返す。 $O(1)$
-    \item rollback(state) : 
+    \item rollback(t) : 
     \begin{itemize}
-        \item $state = -1$ のとき : snapshot() で保存した状態まで巻き戻す。
-        \item $state \neq -1$ のとき : unite() が $state$ 回 呼び出された時の状態まで巻き戻す。
+        \item $t = -1$ のとき : snapshot() で保存した状態まで巻き戻す。
+        \item $t \neq -1$ のとき : unite() が $t$ 回 呼び出された時の状態まで巻き戻す。
     \end{itemize}
 \end{itemize}
 
