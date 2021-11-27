@@ -19,12 +19,6 @@ int find(int x) { return data[x] < 0 ? x : find(data[x]); }
         data[y] = x;
         return true;
     }
-
-    int find(int x) {
-        if (data[x] < 0) return x;
-        return find(data[x]);
-    }
-
     int same(int x, int y) { return find(x) == find(y); }
 
     int size(int x) { return (-data[find(x)]); }
