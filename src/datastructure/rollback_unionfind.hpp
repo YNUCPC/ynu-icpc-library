@@ -30,7 +30,7 @@ int find(int x) { return data[x] < 0 ? x : find(data[x]); }
         history.pop();
     }
 
-    void snapshot() { inner_snap = int(history.size() >> 1); }
+    void snapshot() { inner_snap = state(); }
 
     int state() { return int(history.size() >> 1); }
 
