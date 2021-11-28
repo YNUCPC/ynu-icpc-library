@@ -10,23 +10,12 @@
 - [YNU ICPC Library (PDF, 縦1段組ver)](https://ynucpc.github.io/ynu-icpc-library/main_1col.pdf)
 - [YNU ICPC Library (PDF, 横2段組ver)](https://ynucpc.github.io/ynu-icpc-library/main_2col.pdf)
 
-## 方針
+## ライブラリの方向性
 
-このライブラリはICPC大会において手写しでライブラリを利用することを前提として作成します。
+このライブラリはICPC形式のコンテストにおいて利用しやすくするため、手写しが容易なアルゴリズム実装を目指しています。そのため、実装が複雑になる過度な一般化や高速化は行っていません。
+また、アルゴリズムの正確さと実行速度を保証するため、[verification-helper](https://github.com/online-judge-tools/verification-helper) を使用したテストを行っています。
 
-そのため、次の項目を目標とします。
-
-- 手写しが容易な実装
-- 競技プログラミングにおける利便性
-- アルゴリズムの充実
-
-一方で、この目標のため次のようなことを行う可能性があります。（要検討）
-
-- とりあえず`long long`を使う
-- コンパイル最適化のための指定子などを省略する
-- ...
-
-また、標準的な競技プログラミングのライブラリとして[AtCoder Library](https://github.com/atcoder/ac-library)を参考にします。
+一方で、簡単なアルゴリズム(Dijkstra法、Kraskal法等)は紙面の都合上、ライブラリには載せない方針です。
 
 ## ドキュメント生成
 
