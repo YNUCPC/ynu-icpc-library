@@ -1,6 +1,7 @@
 # YNU ICPC Library
 
 [![verify](https://github.com/YNUCPC/ynu-icpc-library/actions/workflows/verify.yml/badge.svg)](https://github.com/YNUCPC/ynu-icpc-library/actions/workflows/verify.yml) [![make PDF](https://github.com/YNUCPC/ynu-icpc-library/actions/workflows/make_pdf.yml/badge.svg)](https://github.com/YNUCPC/ynu-icpc-library/actions/workflows/make_pdf.yml)
+[![MIT](https://img.shields.io/github/license/YNUCPC/ynu-icpc-library)](https://github.com/YNUCPC/ynu-icpc-library/blob/main/LICENSE)
 
 横浜国立大学競技プログラミング部のICPC用のライブラリです。
 
