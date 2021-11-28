@@ -39,41 +39,11 @@
 latexmk main.tex
 ```
 
-## ライブラリの追加方法
+## ライブラリ開発
 
-1. `src/<hoge>/<fuga>.hpp`を作成
+このライブラリは横浜国立大学競技プログラミング部によって開発されています。
 
-    ここにソースコードを書く。
-
-    ```c++
-    #pragma once
-    #include "template.hpp"
-
-    struct Fuga{
-        ...
-    };
-    ```
-
-1. `docs/<hoge>/<fuga>.tex`を作成
-
-    ドキュメントの内容をここに書く。
-
-    ```latex
-    \subsection{Fuga}
-
-    % ここに使い方や計算量を書く
-
-    \lstinputlisting{src/<hoge>/<fuga>.hpp}
-    ```
-
-1. `docs/<hoge>.tex`に追記
-
-    ```latex
-    \section{Hoge}
-
-    ...
-    \input{docs/<hoge>/<fuga>.tex}
-    ```
+開発ガイドは [CONTRIBUTING.md](https://github.com/YNUCPC/ynu-icpc-library/blob/main/CONTRIBUTING.md) を参照してください。
 
 ## License
 
