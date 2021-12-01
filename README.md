@@ -1,6 +1,7 @@
 # YNU ICPC Library
 
 [![verify](https://github.com/YNUCPC/ynu-icpc-library/actions/workflows/verify.yml/badge.svg)](https://github.com/YNUCPC/ynu-icpc-library/actions/workflows/verify.yml) [![make PDF](https://github.com/YNUCPC/ynu-icpc-library/actions/workflows/make_pdf.yml/badge.svg)](https://github.com/YNUCPC/ynu-icpc-library/actions/workflows/make_pdf.yml)
+[![MIT](https://img.shields.io/github/license/YNUCPC/ynu-icpc-library)](https://github.com/YNUCPC/ynu-icpc-library/blob/main/LICENSE)
 
 横浜国立大学競技プログラミング部のICPC用のライブラリです。
 
@@ -9,70 +10,32 @@
 - [YNU ICPC Library (PDF, 縦1段組ver)](https://ynucpc.github.io/ynu-icpc-library/main_1col.pdf)
 - [YNU ICPC Library (PDF, 横2段組ver)](https://ynucpc.github.io/ynu-icpc-library/main_2col.pdf)
 
-## 方針
+## ライブラリの方向性
 
-このライブラリはICPC大会において手写しでライブラリを利用することを前提として作成します。
+このライブラリはICPC形式のコンテストにおいて利用しやすくするため、手写しが容易なアルゴリズム実装を目指しています。そのため、実装が複雑になる過度な一般化や高速化は行っていません。
+また、アルゴリズムの正確さと実行速度を保証するため、[verification-helper](https://github.com/online-judge-tools/verification-helper) を使用したテストを行っています。
 
-そのため、次の項目を目標とします。
+一方で、簡単なアルゴリズム(Dijkstra法、Kruskal法等)は紙面の都合上、ライブラリには載せない方針です。
 
-- 手写しが容易な実装
-- 競技プログラミングにおける利便性
-- アルゴリズムの充実
+## 使用方法
 
-一方で、この目標のため次のようなことを行う可能性があります。（要検討）
+アルゴリズムのソースコードは `src/` にあり、ジャンル毎にフォルダ分けされています。
 
-- とりあえず`long long`を使う
-- コンパイル最適化のための指定子などを省略する
-- ...
+ライブラリのドキュメント部分は `docs/` 下にあるLaTeXファイルで記述されています。
+ルートファイルは、`main_1col.tex`, `main_2col.tex` でそれぞれ縦向き1段組と横向き2段組に対応しています。
+また、コードブロックに `jlisting` パッケージを使用しています。
 
-また、標準的な競技プログラミングのライブラリとして[AtCoder Library](https://github.com/atcoder/ac-library)を参考にします。
-
-## ドキュメント生成
-
-ドキュメントはLaTeXで書かれているため、PDFの生成にはLaTeX環境が必要です。
-また、`jlisting.sty`パッケージを利用しているため追加する必要があります。([参考](https://qiita.com/ocian/items/28bbbec6c44b9b6b44c4))
-
-以下のコマンドでPDFにコンパイルできます。
+ライブラリPDFの生成は `latexmk` コマンドで行えます。
 
 ```bash
-latexmk main.tex
+latexmk main_2col.tex
 ```
 
-## ライブラリの追加方法
+## ライブラリ開発
 
-1. `src/<hoge>/<fuga>.hpp`を作成
+このライブラリは横浜国立大学競技プログラミング部によって開発されています。
 
-    ここにソースコードを書く。
-
-    ```c++
-    #pragma once
-    #include "template.hpp"
-
-    struct Fuga{
-        ...
-    };
-    ```
-
-1. `docs/<hoge>/<fuga>.tex`を作成
-
-    ドキュメントの内容をここに書く。
-
-    ```latex
-    \subsection{Fuga}
-
-    % ここに使い方や計算量を書く
-
-    \lstinputlisting{src/<hoge>/<fuga>.hpp}
-    ```
-
-1. `docs/<hoge>.tex`に追記
-
-    ```latex
-    \section{Hoge}
-
-    ...
-    \input{docs/<hoge>/<fuga>.tex}
-    ```
+開発ガイドは [CONTRIBUTING.md](https://github.com/YNUCPC/ynu-icpc-library/blob/main/CONTRIBUTING.md) を参照してください。
 
 ## License
 
