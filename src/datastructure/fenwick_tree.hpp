@@ -10,13 +10,13 @@ template <class T> struct FenwickTree {
 
     // a[i] += x
     void add(int i, T x) {
-        for(int p = i + 1; p <= n; p += p & -p) data[p - 1] += x;
+        for (int p = i + 1; p <= n; p += p & -p) data[p - 1] += x;
     }
 
     // [0, r)
     T sum(int r) {
         T s(0);
-        for(int p = r; p > 0; p -= p & -p) s += data[p - 1];
+        for (int p = r; p > 0; p -= p & -p) s += data[p - 1];
         return s;
     }
 
