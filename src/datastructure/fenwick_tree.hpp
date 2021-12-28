@@ -5,17 +5,18 @@ using namespace std;
 template <class T> struct FenwickTree {
     int n;
     vector<T> data;
-    FenwickTree(int n_) : n(n_ + 1), data(n, 0) {}
+    FenwickTree() : n(0) {}
+    FenwickTree(int n) : n(n), data(n, 0) {}
 
     // a[i] += x
     void add(int i, T x) {
-        for (int p = i + 1; p <= n; p += p & -p) data[p] += x;
+        for(int p = i + 1; p <= n; p += p & -p) data[p - 1] += x;
     }
 
     // [0, r)
     T sum(int r) {
         T s(0);
-        for (int p = r + 0; p >= 1; p -= p & -p) s += data[p];
+        for(int p = r; p > 0; p -= p & -p) s += data[p - 1];
         return s;
     }
 
