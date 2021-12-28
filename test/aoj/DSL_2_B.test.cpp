@@ -8,14 +8,14 @@ int main() {
     ios::sync_with_stdio(false);
     int n, q;
     cin >> n >> q;
-    FenwickTree<int> ft(n);
+    FenwickTree<long long> ft(n);
     for (int i = 0; i < q; i++) {
         int com, x, y;
         cin >> com >> x >> y;
         if (com == 0) {
-            ft.add(x, y);
+            ft.add(x - 1, y);
         } else {
-            cout << ft.get(x, y + 1) << endl;
+            cout << ft.sum(x - 1, y) << endl;
         }
     }
     return 0;
