@@ -3,7 +3,6 @@
 #include "../../src/datastructure/fenwick_tree.hpp"
 using namespace std;
 
-
 int main() {
     cin.tie(nullptr);
     ios::sync_with_stdio(false);
