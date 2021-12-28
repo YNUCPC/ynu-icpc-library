@@ -10,7 +10,7 @@ int main() {
     int N, Q;
     cin >> N >> Q;
 
-    FenwickTree ft(N);
+    FenwickTree<long long> ft(N);
     for (int i = 0; i < N; i++) {
         int a;
         cin >> a;
@@ -18,10 +18,20 @@ int main() {
     }
 
     for (int i = 0; i < Q; i++) {
-        int l, r;
-        cin >> l >> r;
-        cout << ft.sum(l, r) << endl;
-    }
+        int t;
+        cin >> t;
+        switch (t) {
+            case 0: {
+                int p, x;
+                cin >> p >> x;
+                ft.add(p, x);
+            } break;
 
-    return 0;
+            case 1: {
+                int l, r;
+                cin >> l >> r;
+                cout << ft.sum(l, r) << endl;
+            } break;
+        }
+    }
 }
