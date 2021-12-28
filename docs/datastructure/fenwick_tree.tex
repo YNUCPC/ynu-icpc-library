@@ -1,0 +1,7 @@
+\subsection{Fenwick Tree}
+一点更新・区間和取得のクエリを $O(\log N)$ で処理するデータ構造。
+\begin{itemize}
+    \item add(i, x) : 点更新 $a[i] \xleftarrow{} a[i] +  x$
+    \item sum(l, r) : 区間和取得 $a[l] + a[l + 1] + \cdots + a[r - 1]$
+\end{itemize}
+\lstinputlisting[firstline=5]{src/datastructure/fenwick_tree.hpp}
