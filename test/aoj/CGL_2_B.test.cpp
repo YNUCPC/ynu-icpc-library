@@ -1,6 +1,6 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/2/CGL_2_B"
 #include <bits/stdc++.h>
-#include "2d_segment_and_line.hpp"
+#include "../../src/geometry/2d_segment_and_line.hpp"
 using namespace std;
 
 int main() {
