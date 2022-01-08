@@ -1,6 +1,6 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/5/CGL_5_A"
 #include <bits/stdc++.h>
-#include "2d_set.hpp"
+#include "../../src/geometry/2d_set.hpp"
 using namespace std;
 
 int main() {
