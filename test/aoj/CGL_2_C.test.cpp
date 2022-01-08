@@ -4,11 +4,13 @@
 using namespace std;
 
 int main() {
-    int q; cin >> q;
-    while(q--) {
-        Segment a,b;
+    int q;
+    cin >> q;
+    while (q--) {
+        Segment a, b;
         {
-            Point p0, p1; cin >> p0 >> p1;
+            Point p0, p1;
+            cin >> p0 >> p1;
             a = Segment(p0, p1);
             cin >> p0 >> p1;
             b = Segment(p0, p1);
