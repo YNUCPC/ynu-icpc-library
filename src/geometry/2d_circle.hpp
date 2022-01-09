@@ -14,7 +14,7 @@ int intersection_cc(Circle c1, Circle c2) {
     Real d = abs(c1.p - c2.p);
     if (sign(c1.r + c2.r - d) == -1) return 4;
     if (equals(c1.r + c2.r, d)) return 3;
-    if (c1.r - c2.r < d) return 2;
+    if (sign(c1.r - c2.r - d) == -1) return 2;
     if (equals(c1.r - c2.r, d)) return 1;
     return 0;
 }
