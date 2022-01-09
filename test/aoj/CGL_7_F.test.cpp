@@ -17,5 +17,6 @@ int main() {
 
     pair<Point, Point> res = tangent_cp(c, p);
     if (res.second < res.first) swap(res.first, res.second);
-    cout << res.first << " " << res.second << endl;
+    cout << res.first << endl;
+    cout << res.second << endl;
 }
