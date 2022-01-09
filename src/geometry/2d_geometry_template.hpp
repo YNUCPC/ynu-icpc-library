@@ -41,7 +41,7 @@ bool operator<(const Point& a, const Point& b) {
     if (equals(a.real(), b.real())) return a.imag() < b.imag();
     return a.real() < b.real();
 }
-}
+}  // namespace std
 
 Real dot(const Point& a, const Point& b) {
     return (conj(a) * b).real();
