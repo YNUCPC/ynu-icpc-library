@@ -6,7 +6,8 @@ using namespace std;
 int main() {
     Circle c1, c2;
     {
-        Point p; Real r;
+        Point p;
+        Real r;
         cin >> p >> r;
         c1 = Circle(p, r);
         cin >> p >> r;
