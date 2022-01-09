@@ -1,7 +1,7 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/5/CGL_5_A"
 #define ERROR 0.000001
 #include <bits/stdc++.h>
-#include "../../src/geometry/2d_set.hpp"
+#include "../../src/geometry/2d_point_set.hpp"
 using namespace std;
 
 int main() {
