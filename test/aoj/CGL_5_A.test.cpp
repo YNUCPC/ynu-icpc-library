@@ -4,8 +4,9 @@
 using namespace std;
 
 int main() {
-    int n; cin >> n;
+    int n;
+    cin >> n;
     Polygon ps(n);
-    for(int i = 0; i < n; i++) cin >> ps[i];
+    for (int i = 0; i < n; i++) cin >> ps[i];
     cout << fixed << setprecision(20) << closest_pair(ps) << endl;
 }
