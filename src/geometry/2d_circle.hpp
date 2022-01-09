@@ -46,8 +46,8 @@ pair<Point, Point> cross_point_cc(const Circle& c1, const Circle& c2) {
     Real d = abs(c1.p - c2.p);
     Real a = acos((c1.r * c1.r + d * d - c2.r * c2.r) / (2 * c1.r * d));
     Real t = atan2(c2.p.imag() - c1.p.imag(), c2.p.real() - c1.p.real());
-    Point p1 = c1.p + Point(cos(t + a) * c1.r, sin(t + a) * c1.r);
-    Point p2 = c1.p + Point(cos(t - a) * c1.r, sin(t - a) * c1.r);
+    Point p1 = c1.p + Point(cos(t + a), sin(t + a)) * c1.r;
+    Point p2 = c1.p + Point(cos(t - a), sin(t - a)) * c1.r;
     return {p1, p2};
 }
 
