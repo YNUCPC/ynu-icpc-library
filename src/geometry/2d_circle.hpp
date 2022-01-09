@@ -66,7 +66,7 @@ vector<Line> tangent_cc(Circle c1, Circle c2) {
         Real h = (c1.r + s * c2.r) / sqrt(g);
         if (equals(1 - h * h, 0.0)) {
             ret.emplace_back(c1.p + u * c1.r, c1.p + (u + v) * c1.r);
-        } else if (1 - h * h > 0) {
+        } else if (sign(1 - h * h) == +1) {
             Point uu = u * h, vv = v * sqrt(1 - h * h);
             ret.emplace_back(c1.p + (uu + vv) * c1.r, c2.p - (uu + vv) * c2.r * s);
             ret.emplace_back(c1.p + (uu - vv) * c1.r, c2.p - (uu - vv) * c2.r * s);
