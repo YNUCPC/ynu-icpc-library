@@ -86,7 +86,7 @@ Real area_poly_c(const Polygon& p, const Circle& c) {
         if (distance_sp(Segment(a, b), c.p) > c.r - EPS) return c.r * c.r * arg(vb * conj(va));
         auto u = cross_point_cl(c, Segment(a, b));
         vector<Point> tot{a, u.first, u.second, b};
-        for (int i = 0; i + 1 < tot.size(); i++) {
+        for (int i = 0; i + 1 < (int)tot.size(); i++) {
             ret += cross_area(c, tot[i], tot[i + 1]);
         }
         return ret;
