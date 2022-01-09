@@ -10,8 +10,7 @@ Real closest_pair(Polygon ps) {
         int mid = (left + right) / 2;
         Real x = ps[mid].real();
         Real ret = min(rec(left, mid), rec(mid, right));
-        inplace_merge(ps.begin() + left, ps.begin() + mid, ps.begin() + right,
-                      [&](const Point& a, const Point& b) { return a.imag() < b.imag(); });
+        inplace_merge(ps.begin() + left, ps.begin() + mid, ps.begin() + right);
         int pos = 0;
         for (int i = left; i < right; i++) {
             if (fabs((ps[i].real()) - x) >= ret) continue;
