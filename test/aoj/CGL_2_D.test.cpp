@@ -1,4 +1,5 @@
 #define PROBLEM "https://onlinejudge.u-aizu.ac.jp/courses/library/4/CGL/2/CGL_2_D"
+#define ERROR 0.00000001
 #include <bits/stdc++.h>
 #include "../../src/geometry/2d_segment_and_line.hpp"
 using namespace std;
