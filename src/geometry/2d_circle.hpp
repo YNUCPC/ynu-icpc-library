@@ -108,5 +108,5 @@ Real area_cc(const Circle& c1, const Circle& c2) {
     Real rc = (d * d + c1.r * c1.r - c2.r * c2.r) / (2 * d);
     Real theta = acos(rc / c1.r);
     Real phi = acos((d - rc) / c2.r);
-    return (c1.r * c1.r * theta + c2.r * c2.r * phi - d * c1.r * sin(theta));
+    return c1.r * c1.r * theta + c2.r * c2.r * phi - d * c1.r * sin(theta);
 }
