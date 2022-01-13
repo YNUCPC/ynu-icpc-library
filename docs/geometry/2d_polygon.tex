@@ -1,0 +1,12 @@
+\subsection{2D Polygon}
+
+\begin{itemize}
+	\item area(p) : 多角形 $p$ の面積を求める
+	\item is\_convex(p) : $p$ が凸多角形か判定する
+	\item contains(Q, p) : 多角形 $Q$ が 点 $p$ を含んでいる ? 2 : 辺上にある ? 1 : 0
+	\item convex\_hull(p) : 点集合 $p$ の凸包を求める
+	\item convex\_diameter(p) : 凸多角形 $p$ の直径を求める
+	\item convex\_cut(p, l) : 凸多角形 $p$ を直線 $l$ で切断し、左にできた図形の面積を求める
+\end{itemize}
+
+\lstinputlisting[firstline=6]{src/geometry/2d_polygon.hpp}

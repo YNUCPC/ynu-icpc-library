@@ -1,0 +1,16 @@
+\subsection{2D Points and Vectors}
+
+\begin{itemize}
+	\item projection(l, p) : 直線 $l$ に対する点 $p$ の射影を求める
+	\item reflection(l, p) : 直線 $l$ に対する点 $p$ の反射を求める
+	\item ccw(a, b, c) : 点 $a$ から見た、点 $b, c$ の位置関係を求める
+	\begin{itemize}
+	    \item $+1$ : $a, b, c$ が反時計回りになる
+	    \item $-1$ : $a, b, c$ が時計回りになる
+	    \item $+2$ : $c, a, b$ がこの順で同一直線上にある
+	    \item $-2$ : $a, b, c$ がこの順で同一直線上にある
+	    \item $\ \:\:0$ : $a, c, b$ がこの順で同一直線上にある
+	\end{itemize}
+\end{itemize}
+
+\lstinputlisting[firstline=4]{src/geometry/2d_point_and_vector.hpp}
