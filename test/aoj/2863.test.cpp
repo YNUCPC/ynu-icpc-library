@@ -26,7 +26,7 @@ int main() {
     sq = sqrt(s_sum) + 1;
     REP(i, n) {
         if (s[i].size() < sq) {
-            trie.add(s[i]);
+            trie.insert(s[i]);
         } else {
             hashs.push_back(RollingHash(s[i]));
         }

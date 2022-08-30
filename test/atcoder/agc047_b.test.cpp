@@ -15,7 +15,7 @@ int main() {
     for (int i = 0; i < n; i++) {
         cin >> s[i];
         reverse(s[i].begin(), s[i].end());
-        trie.add(s[i]);
+        trie.insert(s[i]);
     }
     ll ans = 0;
     for (int i = 0; i < n; i++) {
