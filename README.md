@@ -1,14 +1,15 @@
 # YNU ICPC Library
 
-[![verify](https://github.com/YNUCPC/ynu-icpc-library/actions/workflows/verify.yml/badge.svg)](https://github.com/YNUCPC/ynu-icpc-library/actions/workflows/verify.yml) [![make PDF](https://github.com/YNUCPC/ynu-icpc-library/actions/workflows/make_pdf.yml/badge.svg)](https://github.com/YNUCPC/ynu-icpc-library/actions/workflows/make_pdf.yml)
+[![verify](https://github.com/YNUCPC/ynu-icpc-library/actions/workflows/verify.yml/badge.svg)](https://github.com/YNUCPC/ynu-icpc-library/actions/workflows/verify.yml)
+[![GitHub Pages](https://img.shields.io/static/v1?label=GitHub+Pages&message=+&color=brightgreen&logo=github)](https://ynucpc.github.io/ynu-icpc-library)
 [![MIT](https://img.shields.io/github/license/YNUCPC/ynu-icpc-library)](https://github.com/YNUCPC/ynu-icpc-library/blob/main/LICENSE)
 
 横浜国立大学競技プログラミング部のICPC用のライブラリです。
 
 ライブラリの内容は以下のリンクから参照できます。
 
-- [YNU ICPC Library (PDF, 縦1段組ver)](https://ynucpc.github.io/ynu-icpc-library/main_1col.pdf)
-- [YNU ICPC Library (PDF, 横2段組ver)](https://ynucpc.github.io/ynu-icpc-library/main_2col.pdf)
+- [YNU ICPC Library (PDF, 縦1段組ver)](https://github.com/YNUCPC/ynu-icpc-library/blob/main/main_1col.pdf)
+- [YNU ICPC Library (PDF, 横2段組ver)](https://github.com/YNUCPC/ynu-icpc-library/blob/main/main_2col.pdf)
 
 ## ライブラリの方向性
 
