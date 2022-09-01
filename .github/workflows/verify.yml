@@ -45,9 +45,16 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-verify-helper-
 
-      - name: Run tests
+      - name: Run tests (on main branch)
+        if: github.ref == 'refs/heads/main'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DROPBOX_TOKEN: ${{ secrets.ATCODER_DROPBOX_TOKEN }}
+        run: oj-verify run --jobs 2
+
+      - name: Run tests (on other branch)
+        if: github.ref != 'refs/heads/main'
+        env:
           DROPBOX_TOKEN: ${{ secrets.ATCODER_DROPBOX_TOKEN }}
         run: oj-verify run --jobs 2
 
