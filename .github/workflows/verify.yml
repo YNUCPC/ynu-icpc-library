@@ -47,6 +47,18 @@ jobs:
 
       - name: Run tests
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DROPBOX_TOKEN: ${{ secrets.ATCODER_DROPBOX_TOKEN }}
         run: oj-verify run --jobs 2
 
+      - name: Generate token
+        id: generate_token
+        uses: tibdex/github-app-token@v1
+        with:
+          app_id: ${{ secrets.YNUCPC_ACCESS_TOKEN_APP_ID }}
+          private_key: ${{ secrets.YNUCPC_ACCESS_TOKEN_APP_PRIVATE_KEY }}
+
+      - name: Generate documents
+        env:
+          GH_PAT: ${{ steps.generate_token.outputs.token }}
+        run: oj-verify docs
