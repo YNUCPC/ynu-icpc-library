@@ -92,6 +92,12 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v2
 
+      - name: Set up Python
+        uses: actions/setup-python@v2
+
+      - name: Install dependencies
+        run: pip3 install online-judge-verify-helper
+
       - name: Download timestamp
         uses: actions/download-artifact@v3
         with:
