@@ -60,5 +60,6 @@ jobs:
 
       - name: Generate documents
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_PAT: ${{ steps.generate_token.outputs.token }}
         run: oj-verify docs
