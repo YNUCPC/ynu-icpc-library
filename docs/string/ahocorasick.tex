@@ -6,8 +6,8 @@
     \item insert(s) : パターンとして文字列$s$を追加する。計算量$O(|s|)$
     \item build() : 前処理としてオートマトンの状態遷移を構築する。$O(k\cdot\sum{|s_i|})$。 $k$は文字の種類数。これ以下の関数はbuild()後に正常に動作する。
     \item next(idx) : 頂点idxから文字cで遷移したときの頂点番号を返す。
-    \item accept(idx) : 頂点idxにマッチするパターンが存在するか
-    \item match(idx) :  頂点idxにマッチするすべてのパターンのIDを返す
+    \item accept(idx) : 頂点idxにマッチするパターンが存在するか。
+    \item match(idx) :  頂点idxにマッチするすべてのパターンのIDを返す。
     \item search(t) : 文字列$t$にマッチするパターンを全て求める。{\ttfamily res[i]}には$t[i]$を末尾としてマッチするパターンのIDリストが格納される。計算量$O(|t|+マッチ数)$
 \end{itemize}
 
