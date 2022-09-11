@@ -1,7 +1,7 @@
 #define PROBLEM "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2863"
 #include <bits/stdc++.h>
 #include "../../src/math/modint.hpp"
-#include "../../src/string/ahocorasick.hpp"
+#include "../../src/string/aho_corasick.hpp"
 using namespace std;
 
 constexpr long long MOD = 1000000007;

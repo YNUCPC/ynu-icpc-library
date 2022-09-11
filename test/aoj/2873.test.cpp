@@ -1,6 +1,6 @@
 #define PROBLEM "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=2873"
 #include <bits/stdc++.h>
-#include "../../src/string/ahocorasick.hpp"
+#include "../../src/string/aho_corasick.hpp"
 using namespace std;
 
 int main() {
