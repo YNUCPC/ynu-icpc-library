@@ -38,7 +38,7 @@ int main() {
         if (dp[i].val() == 0) continue;
         int idx = 0, j = 0;
         while (i + j < m) {
-            idx = trie.next_index(idx, t[i + j]);
+            idx = trie.next(idx, t[i + j]);
             if (idx == -1) break;
             if (!trie.nodes[idx].ids.empty()) {
                 dp[i + j + 1] += dp[i];

@@ -25,13 +25,13 @@ int main() {
         for (int j = 0; j < m - 1; j++) {
             for (int k = 0; k < 26; k++) {
                 if (cnt[k] > 0) {
-                    int tmp = trie.next_index(now, k + 'a');
+                    int tmp = trie.next(now, k + 'a');
                     if (tmp != -1) {
                         ans += trie.nodes[tmp].ids.size();
                     }
                 }
             }
-            now = trie.next_index(now, s[i][j]);
+            now = trie.next(now, s[i][j]);
             cnt[s[i][j] - 'a']--;
         }
     }
