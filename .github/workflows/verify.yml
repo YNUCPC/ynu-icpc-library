@@ -34,7 +34,7 @@ jobs:
         uses: actions/setup-python@v2
 
       - name: Install dependencies
-        run: pip3 install online-judge-verify-helper
+        run: pip3 install -U online-judge-verify-helper
 
       - name: Cache test cases
         uses: actions/cache@v2
@@ -47,7 +47,7 @@ jobs:
       - name: Run tests
         env:
           DROPBOX_TOKEN: ${{ secrets.ATCODER_DROPBOX_TOKEN }}
-        run: oj-verify run --jobs 2
+        run: oj-verify run --jobs 2 --timeout 1800
 
       - name: Upload timestamp
         uses: actions/upload-artifact@v2
@@ -96,7 +96,7 @@ jobs:
         uses: actions/setup-python@v2
 
       - name: Install dependencies
-        run: pip3 install online-judge-verify-helper
+        run: pip3 install -U online-judge-verify-helper
 
       - name: Download timestamp
         uses: actions/download-artifact@v3
@@ -127,4 +127,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_PAT: ${{ steps.generate_token.outputs.token }}
-        run: oj-verify docs
+        run: oj-verify docs --jobs 2
