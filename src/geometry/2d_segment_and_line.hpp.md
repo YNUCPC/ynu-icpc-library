@@ -137,7 +137,7 @@ data:
   requiredBy:
   - src/geometry/2d_polygon.hpp
   - src/geometry/2d_circle.hpp
-  timestamp: '2022-09-01 22:24:26+09:00'
+  timestamp: '2022-09-12 12:19:07+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - test/aoj/CGL_3_B.test.cpp

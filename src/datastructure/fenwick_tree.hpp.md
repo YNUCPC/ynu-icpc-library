@@ -6,12 +6,12 @@ data:
   - icon: ':heavy_check_mark:'
     path: test/aoj/DSL_2_B.test.cpp
     title: test/aoj/DSL_2_B.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/library_checker/point_add_range_sum.yosupo.test.cpp
     title: test/library_checker/point_add_range_sum.yosupo.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 2 \"src/datastructure/fenwick_tree.hpp\"\n#include <bits/stdc++.h>\n\
@@ -34,8 +34,8 @@ data:
   isVerificationFile: false
   path: src/datastructure/fenwick_tree.hpp
   requiredBy: []
-  timestamp: '2022-09-01 22:24:26+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2022-09-12 12:19:07+09:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/library_checker/point_add_range_sum.yosupo.test.cpp
   - test/aoj/DSL_2_B.test.cpp

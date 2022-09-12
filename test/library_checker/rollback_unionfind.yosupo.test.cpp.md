@@ -1,14 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: src/datastructure/rollback_unionfind.hpp
     title: src/datastructure/rollback_unionfind.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/persistent_unionfind
@@ -58,8 +58,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/rollback_unionfind.yosupo.test.cpp
   requiredBy: []
-  timestamp: '2022-09-01 22:24:26+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2022-09-12 12:19:07+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/rollback_unionfind.yosupo.test.cpp
 layout: document

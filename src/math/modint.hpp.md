@@ -10,23 +10,26 @@ data:
     path: test/aoj/2863.test.cpp
     title: test/aoj/2863.test.cpp
   - icon: ':heavy_check_mark:'
+    path: test/aoj/2863_ahocorasick.test.cpp
+    title: test/aoj/2863_ahocorasick.test.cpp
+  - icon: ':x:'
     path: test/aoj/NTL_1_B.test.cpp
     title: test/aoj/NTL_1_B.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/library_checker/bitwise_and_convolution.test.cpp
     title: test/library_checker/bitwise_and_convolution.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/library_checker/bitwise_and_convolution_by_kronecker.test.cpp
     title: test/library_checker/bitwise_and_convolution_by_kronecker.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/library_checker/bitwise_or_convolution.test.cpp
     title: test/library_checker/bitwise_or_convolution.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/library_checker/bitwise_xor_convolution.test.cpp
     title: test/library_checker/bitwise_xor_convolution.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 2 \"src/math/modint.hpp\"\n#include <bits/stdc++.h>\nusing namespace\
@@ -80,13 +83,14 @@ data:
   isVerificationFile: false
   path: src/math/modint.hpp
   requiredBy: []
-  timestamp: '2022-09-01 22:24:26+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2022-09-12 12:19:07+09:00'
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - test/library_checker/bitwise_and_convolution.test.cpp
   - test/library_checker/bitwise_and_convolution_by_kronecker.test.cpp
   - test/library_checker/bitwise_or_convolution.test.cpp
   - test/library_checker/bitwise_xor_convolution.test.cpp
+  - test/aoj/2863_ahocorasick.test.cpp
   - test/aoj/0341.test.cpp
   - test/aoj/NTL_1_B.test.cpp
   - test/aoj/2863.test.cpp

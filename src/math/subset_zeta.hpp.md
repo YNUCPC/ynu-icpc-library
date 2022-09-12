@@ -3,12 +3,12 @@ data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/library_checker/bitwise_and_convolution.test.cpp
     title: test/library_checker/bitwise_and_convolution.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"src/math/subset_zeta.hpp\"\n#include <bits/stdc++.h>\nusing\
@@ -41,8 +41,8 @@ data:
   isVerificationFile: false
   path: src/math/subset_zeta.hpp
   requiredBy: []
-  timestamp: '2022-09-01 22:24:26+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2022-09-12 12:19:07+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - test/library_checker/bitwise_and_convolution.test.cpp
 documentation_of: src/math/subset_zeta.hpp

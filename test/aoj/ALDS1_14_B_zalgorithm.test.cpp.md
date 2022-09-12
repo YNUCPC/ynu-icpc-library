@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: src/string/z_algorithm.hpp
     title: src/string/z_algorithm.hpp
   _extendedRequiredBy: []
@@ -39,7 +39,7 @@ data:
   isVerificationFile: true
   path: test/aoj/ALDS1_14_B_zalgorithm.test.cpp
   requiredBy: []
-  timestamp: '2022-09-01 22:24:26+09:00'
+  timestamp: '2022-09-12 12:19:07+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: test/aoj/ALDS1_14_B_zalgorithm.test.cpp

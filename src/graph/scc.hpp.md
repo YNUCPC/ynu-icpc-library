@@ -2,19 +2,19 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: src/graph/two_sat.hpp
     title: src/graph/two_sat.hpp
   _extendedVerifiedWith:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/aoj/GRL_3_C.test.cpp
     title: test/aoj/GRL_3_C.test.cpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: test/library_checker/two_sat.yosupo.test.cpp
     title: test/library_checker/two_sat.yosupo.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     links: []
   bundledCode: "#line 2 \"src/graph/scc.hpp\"\n#include <bits/stdc++.h>\nusing namespace\
@@ -86,8 +86,8 @@ data:
   path: src/graph/scc.hpp
   requiredBy:
   - src/graph/two_sat.hpp
-  timestamp: '2022-09-01 22:24:26+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  timestamp: '2022-09-12 12:19:07+09:00'
+  verificationStatus: LIBRARY_ALL_WA
   verifiedWith:
   - test/library_checker/two_sat.yosupo.test.cpp
   - test/aoj/GRL_3_C.test.cpp

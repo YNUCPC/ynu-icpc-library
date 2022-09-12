@@ -1,17 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: src/graph/scc.hpp
     title: src/graph/scc.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':x:'
     path: src/graph/two_sat.hpp
     title: src/graph/two_sat.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.yosupo.jp/problem/two_sat
@@ -85,8 +85,8 @@ data:
   isVerificationFile: true
   path: test/library_checker/two_sat.yosupo.test.cpp
   requiredBy: []
-  timestamp: '2022-09-01 22:24:26+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2022-09-12 12:19:07+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: test/library_checker/two_sat.yosupo.test.cpp
 layout: document
