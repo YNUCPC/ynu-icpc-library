@@ -11,7 +11,7 @@ vector<int> lcp_array(const string& s, const vector<int>& sa) {
         if (len > 0) len--;
         if (rank[i] == n - 1) continue;
         int j = sa[rank[i] + 1];  // s[i,n)より辞書順で1つ大きいsuffixの先頭位置
-        while (max(i, j) + len < n && s[i + len] == s[j + len]) len++;
+        while (max(i, j) + len < int(s.size()) && s[i + len] == s[j + len]) len++;
         lcp[rank[i]] = len;
     }
     return lcp;
