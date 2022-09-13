@@ -28,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v1  # use checkout@v1 for oj-verify's timestamp
 
       - name: Set up Python
         uses: actions/setup-python@v2
@@ -47,7 +47,7 @@ jobs:
       - name: Run tests
         env:
           DROPBOX_TOKEN: ${{ secrets.ATCODER_DROPBOX_TOKEN }}
-        run: oj-verify run --jobs 2 --timeout 1800
+        run: oj-verify run --jobs 2
 
       - name: Upload timestamp
         uses: actions/upload-artifact@v2
