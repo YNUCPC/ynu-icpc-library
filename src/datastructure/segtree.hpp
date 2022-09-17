@@ -29,9 +29,7 @@ struct SegmentTree {
         for (int i = 1; i <= log; i++) update(p >> i);
     }
     // return a[p]
-    S get(int p) const {
-        return dat[p + size];
-    }
+    S get(int p) const { return dat[p + size]; }
     // return op(a[l], ..., a[r-1])
     S prod(int l, int r) const {
         S sml = e(), smr = e();
