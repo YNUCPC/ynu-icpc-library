@@ -110,7 +110,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ steps.generate_token.outputs.token }}
-          user_name: 'github-actions[bot]'
           enable_jekyll: true
           publish_dir: ./.verify-helper/markdown
 
