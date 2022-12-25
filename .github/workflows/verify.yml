@@ -108,9 +108,10 @@ jobs:
 
       - name: Deploy documents
         uses: peaceiris/actions-gh-pages@v3
-        personal_token: ${{ steps.generate_token.outputs.token }}
-        enable_jekyll: true
-        publish_dir: ./verify-helper/markdown
+        with:
+          personal_token: ${{ steps.generate_token.outputs.token }}
+          enable_jekyll: true
+          publish_dir: ./verify-helper/markdown
 
       - name: Commit PDF and timestamp
         uses: EndBug/add-and-commit@v9
