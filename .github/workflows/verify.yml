@@ -44,7 +44,7 @@ jobs:
       - name: Upload documents
         uses: actions/upload-artifact@v3
         with:
-          name: documents
+          name: oj-documents
           path: .verify-helper/markdown
 
   build:
@@ -91,8 +91,7 @@ jobs:
       - name: Download documents
         uses: actions/download-artifact@v3
         with:
-          name: documents
-          path: .verify-helper
+          name: oj-documents
 
       - name: Download PDF
         uses: actions/download-artifact@v3
@@ -111,7 +110,7 @@ jobs:
         with:
           personal_token: ${{ steps.generate_token.outputs.token }}
           enable_jekyll: true
-          publish_dir: ./verify-helper/markdown
+          publish_dir: ./oj-documents
 
       - name: Commit PDF and timestamp
         uses: EndBug/add-and-commit@v9
